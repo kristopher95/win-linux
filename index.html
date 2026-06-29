@@ -1,0 +1,1930 @@
+<!DOCTYPE html>
+
+<html lang="en">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Windows to Linux Command Reference | Win2Linux</title>
+<meta content="Find Linux equivalents for common Windows commands, with explanations, practical use cases, options, warnings, examples and copyable commands." name="description"/>
+<meta content="index,follow,max-image-preview:large,max-snippet:-1,max-video-preview:-1" name="robots"/>
+<meta content="#0d1117" id="themeColorMeta" name="theme-color"/>
+<meta content="dark light" name="color-scheme"/>
+<meta content="website" property="og:type"/>
+<meta content="Win2Linux" property="og:site_name"/>
+<meta content="Windows to Linux Command Reference | Win2Linux" property="og:title"/>
+<meta content="Linux equivalents for Windows commands with examples, use cases, warnings and copyable commands." property="og:description"/>
+<meta content="summary" name="twitter:card"/>
+<meta content="Windows to Linux Command Reference | Win2Linux" name="twitter:title"/>
+<meta content="Linux equivalents for Windows commands with examples, use cases, warnings and copyable commands." name="twitter:description"/>
+<script>
+(() => {
+  try {
+    const savedTheme = localStorage.getItem('win2linux-theme');
+    const preferredTheme = window.matchMedia('(prefers-color-scheme: light)').matches ? 'light' : 'dark';
+    const theme = savedTheme === 'light' || savedTheme === 'dark' ? savedTheme : preferredTheme;
+    document.documentElement.dataset.theme = theme;
+    document.documentElement.style.colorScheme = theme;
+  } catch {
+    document.documentElement.dataset.theme = 'dark';
+  }
+})();
+</script><link href="stylesheets/style.css" rel="stylesheet"/>
+<script id="structuredData" type="application/ld+json">{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "WebSite",
+      "name": "Win2Linux",
+      "description": "A searchable Windows-to-Linux command reference with examples, use cases, options and safety notes.",
+      "inLanguage": "en"
+    },
+    {
+      "@type": "WebApplication",
+      "name": "Win2Linux Command Reference",
+      "applicationCategory": "DeveloperApplication",
+      "operatingSystem": "Any",
+      "browserRequirements": "Requires a modern web browser with JavaScript enabled",
+      "isAccessibleForFree": true,
+      "description": "Find Linux equivalents for Windows commands with copyable examples and practical explanations."
+    },
+    {
+      "@type": "CollectionPage",
+      "name": "Windows to Linux Command Reference",
+      "description": "A collection of 200 practical Windows-to-Linux command mappings."
+    }
+  ]
+}</script>
+<link href="./" id="canonicalLink" rel="canonical"/></head>
+<body>
+<a class="skip-link" href="#mainContent">Skip to content</a>
+<header class="site-header">
+<button aria-label="Return to all commands" class="logo-button" id="homeButton" type="button">
+<span class="win">Windows</span>
+<span class="arr">→</span>
+<span class="lnx">Linux</span>
+</button>
+<p class="tagline">Commands, distributions, and practical Linux guidance</p>
+<nav class="site-nav site-nav-prominent" aria-label="Primary navigation">
+<a class="site-nav-link active" aria-current="page" href="./"><span class="nav-icon" aria-hidden="true">⌘</span><span class="nav-copy"><strong>Commands</strong><small>200 detailed guides</small></span></a>
+<a class="site-nav-link" href="linux-distros.html"><span class="nav-icon" aria-hidden="true">◉</span><span class="nav-copy"><strong>Linux distros</strong><small>50 compared</small></span></a>
+</nav>
+<div class="header-actions"><button aria-label="Switch to light mode" aria-pressed="false" class="theme-toggle" id="themeToggle" type="button">
+<span aria-hidden="true" class="theme-icon" id="themeIcon">☀</span>
+<span id="themeLabel">Light mode</span>
+</button><div class="stats"><span id="commandCount">…</span> commands</div></div></header>
+<div class="app-shell">
+<aside aria-label="Command navigation" class="sidebar">
+<div class="search-wrap">
+<label class="sr-only" for="search">Search commands</label>
+<input autocomplete="off" disabled="" id="search" placeholder="Search commands…" spellcheck="false" type="search"/>
+</div>
+<div aria-label="Filter by category" class="category-tabs" id="categories"></div>
+<div aria-live="polite" class="cmd-list" id="commandList">
+<div class="state-box">
+<div aria-hidden="true" class="spinner"></div>
+<p>Loading command reference…</p>
+</div>
+</div>
+</aside>
+<main class="main-content" id="mainContent" tabindex="-1">
+<section aria-labelledby="welcomeTitle" class="welcome-view" id="welcomeView">
+<div class="hero-card">
+<p class="eyebrow">Windows → Linux</p>
+<h1 id="welcomeTitle">Find the Linux equivalent of a Windows command</h1>
+<p class="hero-copy">Select a command to open its complete guide. Each guide includes a description, common use cases, copyable Linux commands, options, examples and important warnings.</p>
+<div class="hero-route-cards" aria-label="Explore Win2Linux">
+<a class="hero-route-card active" href="./"><span aria-hidden="true">⌘</span><div><strong>Browse 200 commands</strong><small>Windows-to-Linux mappings, examples and copy buttons</small></div></a>
+<a class="hero-route-card" href="linux-distros.html"><span aria-hidden="true">◉</span><div><strong>Compare 50 Linux distros</strong><small>Technical data, use cases, trade-offs and official downloads</small></div></a>
+</div>
+<div aria-label="Example command mappings" class="mapping-examples">
+<span><code>dir</code> → <code>ls</code></span>
+<span><code>ipconfig</code> → <code>ip addr</code></span>
+<span><code>tasklist</code> → <code>ps aux</code></span>
+<span><code>findstr</code> → <code>grep</code></span>
+</div>
+</div>
+<section aria-labelledby="browseTitle" class="browse-section">
+<div class="section-heading">
+<div>
+<p class="eyebrow">Browse</p>
+<h2 id="browseTitle">All command guides</h2>
+</div>
+<p id="visibleCount">200 commands</p>
+</div>
+<div class="command-card-grid" id="commandCards"><a class="command-card" data-open-command="dir" href="?command=dir">
+<span class="mapping-mini"><code>dir</code><span>→</span><code>ls -la</code></span>
+<strong>List directory contents</strong>
+<span>Lists files and folders in the current (or specified) directory.</span>
+<em>Open full guide →</em>
+</a>
+<a class="command-card" data-open-command="cd" href="?command=cd">
+<span class="mapping-mini"><code>cd</code><span>→</span><code>cd</code></span>
+<strong>Change directory</strong>
+<span>Navigates between directories. Same command name, but with important differences in path notation.</span>
+<em>Open full guide →</em>
+</a>
+<a class="command-card" data-open-command="copy" href="?command=copy">
+<span class="mapping-mini"><code>copy</code><span>→</span><code>cp</code></span>
+<strong>Copy files and folders</strong>
+<span>Copies files or entire directory trees to another location.</span>
+<em>Open full guide →</em>
+</a>
+<a class="command-card" data-open-command="move" href="?command=move">
+<span class="mapping-mini"><code>move</code><span>→</span><code>mv</code></span>
+<strong>Move or rename files</strong>
+<span>Moves files to a new location, or renames them. In Linux, renaming IS moving.</span>
+<em>Open full guide →</em>
+</a>
+<a class="command-card" data-open-command="del-erase" href="?command=del-erase">
+<span class="mapping-mini"><code>del / erase</code><span>→</span><code>rm</code></span>
+<strong>Delete files and folders</strong>
+<span>Removes files or directories. Be very careful — Linux has no Recycle Bin by default.</span>
+<em>Open full guide →</em>
+</a>
+<a class="command-card" data-open-command="mkdir" href="?command=mkdir">
+<span class="mapping-mini"><code>mkdir</code><span>→</span><code>mkdir</code></span>
+<strong>Create new directories</strong>
+<span>Creates one or more new directories. Same name, but with a useful extra flag.</span>
+<em>Open full guide →</em>
+</a>
+<a class="command-card" data-open-command="type" href="?command=type">
+<span class="mapping-mini"><code>type</code><span>→</span><code>cat</code></span>
+<strong>Display file contents</strong>
+<span>Shows the contents of a text file in the terminal. Also used to combine files.</span>
+<em>Open full guide →</em>
+</a>
+<a class="command-card" data-open-command="ipconfig" href="?command=ipconfig">
+<span class="mapping-mini"><code>ipconfig</code><span>→</span><code>ip addr show</code></span>
+<strong>Show network configuration</strong>
+<span>Displays IP addresses, network interfaces, and connection details.</span>
+<em>Open full guide →</em>
+</a>
+<a class="command-card" data-open-command="ping" href="?command=ping">
+<span class="mapping-mini"><code>ping</code><span>→</span><code>ping</code></span>
+<strong>Test network connectivity</strong>
+<span>Sends ICMP echo requests to test if a host is reachable. Same name, but runs forever by default on Linux.</span>
+<em>Open full guide →</em>
+</a>
+<a class="command-card" data-open-command="tracert" href="?command=tracert">
+<span class="mapping-mini"><code>tracert</code><span>→</span><code>traceroute</code></span>
+<strong>Trace network route to host</strong>
+<span>Shows each network hop between your machine and a destination, helping diagnose where connections slow down or fail.</span>
+<em>Open full guide →</em>
+</a>
+<a class="command-card" data-open-command="netstat" href="?command=netstat">
+<span class="mapping-mini"><code>netstat</code><span>→</span><code>ss -tuln</code></span>
+<strong>Show network connections</strong>
+<span>Displays active network connections, listening ports, and socket statistics.</span>
+<em>Open full guide →</em>
+</a>
+<a class="command-card" data-open-command="chkdsk" href="?command=chkdsk">
+<span class="mapping-mini"><code>chkdsk</code><span>→</span><code>fsck</code></span>
+<strong>Check filesystem integrity</strong>
+<span>Scans and repairs filesystem errors on a disk or partition.</span>
+<em>Open full guide →</em>
+</a>
+<a class="command-card" data-open-command="format" href="?command=format">
+<span class="mapping-mini"><code>format</code><span>→</span><code>mkfs.ext4</code></span>
+<strong>Format a disk/partition</strong>
+<span>Creates a new filesystem on a disk partition, erasing all existing data.</span>
+<em>Open full guide →</em>
+</a>
+<a class="command-card" data-open-command="diskpart-fdisk" href="?command=diskpart-fdisk">
+<span class="mapping-mini"><code>diskpart / fdisk</code><span>→</span><code>fdisk / parted</code></span>
+<strong>Manage disk partitions</strong>
+<span>Creates, deletes, and modifies disk partitions. Use with extreme care.</span>
+<em>Open full guide →</em>
+</a>
+<a class="command-card" data-open-command="tasklist" href="?command=tasklist">
+<span class="mapping-mini"><code>tasklist</code><span>→</span><code>ps aux</code></span>
+<strong>List running processes</strong>
+<span>Shows all currently running processes, like the Processes tab in Task Manager.</span>
+<em>Open full guide →</em>
+</a>
+<a class="command-card" data-open-command="taskkill" href="?command=taskkill">
+<span class="mapping-mini"><code>taskkill</code><span>→</span><code>kill / killall</code></span>
+<strong>Stop/terminate a process</strong>
+<span>Ends a running process by its process ID (PID) or name.</span>
+<em>Open full guide →</em>
+</a>
+<a class="command-card" data-open-command="cls" href="?command=cls">
+<span class="mapping-mini"><code>cls</code><span>→</span><code>clear</code></span>
+<strong>Clear the terminal screen</strong>
+<span>Clears all text from the terminal window.</span>
+<em>Open full guide →</em>
+</a>
+<a class="command-card" data-open-command="echo" href="?command=echo">
+<span class="mapping-mini"><code>echo</code><span>→</span><code>echo</code></span>
+<strong>Print text to terminal</strong>
+<span>Displays a line of text. Also used in scripts for variable output.</span>
+<em>Open full guide →</em>
+</a>
+<a class="command-card" data-open-command="set" href="?command=set">
+<span class="mapping-mini"><code>set</code><span>→</span><code>export / env</code></span>
+<strong>View or set environment variables</strong>
+<span>Lists or modifies environment variables available in the current session.</span>
+<em>Open full guide →</em>
+</a>
+<a class="command-card" data-open-command="find" href="?command=find">
+<span class="mapping-mini"><code>find</code><span>→</span><code>find</code></span>
+<strong>Search for files and directories</strong>
+<span>Searches for files matching given criteria anywhere in the filesystem.</span>
+<em>Open full guide →</em>
+</a>
+<a class="command-card" data-open-command="findstr" href="?command=findstr">
+<span class="mapping-mini"><code>findstr</code><span>→</span><code>grep</code></span>
+<strong>Search text within files</strong>
+<span>Searches for text patterns inside files. One of the most-used Linux commands.</span>
+<em>Open full guide →</em>
+</a>
+<a class="command-card" data-open-command="systeminfo" href="?command=systeminfo">
+<span class="mapping-mini"><code>systeminfo</code><span>→</span><code>uname -a</code></span>
+<strong>Display system information</strong>
+<span>Shows OS version, hardware details, memory, and system configuration.</span>
+<em>Open full guide →</em>
+</a>
+<a class="command-card" data-open-command="shutdown" href="?command=shutdown">
+<span class="mapping-mini"><code>shutdown</code><span>→</span><code>shutdown</code></span>
+<strong>Shutdown or restart the system</strong>
+<span>Powers off, reboots, or schedules a shutdown of the Linux system.</span>
+<em>Open full guide →</em>
+</a>
+<a class="command-card" data-open-command="whoami" href="?command=whoami">
+<span class="mapping-mini"><code>whoami</code><span>→</span><code>whoami</code></span>
+<strong>Show current username</strong>
+<span>Displays the username of the currently logged-in user.</span>
+<em>Open full guide →</em>
+</a>
+<a class="command-card" data-open-command="runas" href="?command=runas">
+<span class="mapping-mini"><code>runas</code><span>→</span><code>sudo</code></span>
+<strong>Run command as administrator</strong>
+<span>Executes a command with elevated privileges (as root/superuser).</span>
+<em>Open full guide →</em>
+</a>
+<a class="command-card" data-open-command="ren-rename" href="?command=ren-rename">
+<span class="mapping-mini"><code>ren / rename</code><span>→</span><code>mv / rename</code></span>
+<strong>Rename files</strong>
+<span>Renames a file or batch-renames multiple files matching a pattern.</span>
+<em>Open full guide →</em>
+</a>
+<a class="command-card" data-open-command="attrib" href="?command=attrib">
+<span class="mapping-mini"><code>attrib</code><span>→</span><code>chmod / chown</code></span>
+<strong>Change file permissions/attributes</strong>
+<span>Controls who can read, write, or execute a file. Linux uses a more powerful permission model than Windows.</span>
+<em>Open full guide →</em>
+</a>
+<a class="command-card" data-open-command="xcopy" href="?command=xcopy">
+<span class="mapping-mini"><code>xcopy</code><span>→</span><code>rsync -av</code></span>
+<strong>Advanced copy with sync &amp; progress</strong>
+<span>Copies directories with more control than cp — supports sync, progress display, resume, and remote copying.</span>
+<em>Open full guide →</em>
+</a>
+<a class="command-card" data-open-command="tree" href="?command=tree">
+<span class="mapping-mini"><code>tree</code><span>→</span><code>tree</code></span>
+<strong>Display directory tree</strong>
+<span>Shows the directory structure as a visual tree. May need to be installed on Linux.</span>
+<em>Open full guide →</em>
+</a>
+<a class="command-card" data-open-command="pushd-popd" href="?command=pushd-popd">
+<span class="mapping-mini"><code>pushd / popd</code><span>→</span><code>pushd / popd</code></span>
+<strong>Save and restore directory location</strong>
+<span>Saves your current directory to a stack so you can jump back to it later after navigating elsewhere.</span>
+<em>Open full guide →</em>
+</a>
+<a class="command-card" data-open-command="more" href="?command=more">
+<span class="mapping-mini"><code>more</code><span>→</span><code>less</code></span>
+<strong>Page through large files</strong>
+<span>Displays large text files one screen at a time, allowing you to scroll up and down.</span>
+<em>Open full guide →</em>
+</a>
+<a class="command-card" data-open-command="nslookup" href="?command=nslookup">
+<span class="mapping-mini"><code>nslookup</code><span>→</span><code>dig / nslookup</code></span>
+<strong>Look up DNS records</strong>
+<span>Queries DNS servers to resolve hostnames to IP addresses and inspect DNS records.</span>
+<em>Open full guide →</em>
+</a>
+<a class="command-card" data-open-command="ftp" href="?command=ftp">
+<span class="mapping-mini"><code>ftp</code><span>→</span><code>scp / sftp</code></span>
+<strong>Transfer files over network</strong>
+<span>Transfers files between computers over a network. Linux has several options with different security levels.</span>
+<em>Open full guide →</em>
+</a>
+<a class="command-card" data-open-command="net-use" href="?command=net-use">
+<span class="mapping-mini"><code>net use</code><span>→</span><code>mount / smbclient</code></span>
+<strong>Connect to network shares</strong>
+<span>Mounts a network share (Windows SMB/CIFS share or NFS) so you can access it like a local folder.</span>
+<em>Open full guide →</em>
+</a>
+<a class="command-card" data-open-command="netsh-wlan-show-profiles" href="?command=netsh-wlan-show-profiles">
+<span class="mapping-mini"><code>netsh wlan show profiles</code><span>→</span><code>nmcli</code></span>
+<strong>Manage Wi-Fi connections</strong>
+<span>Lists, connects to, and manages wireless network profiles.</span>
+<em>Open full guide →</em>
+</a>
+<a class="command-card" data-open-command="winget-install-choco-install" href="?command=winget-install-choco-install">
+<span class="mapping-mini"><code>winget install / choco install</code><span>→</span><code>sudo apt install</code></span>
+<strong>Install software packages</strong>
+<span>Installs programs and tools from an online repository — like an App Store for the terminal.</span>
+<em>Open full guide →</em>
+</a>
+<a class="command-card" data-open-command="winget-uninstall" href="?command=winget-uninstall">
+<span class="mapping-mini"><code>winget uninstall</code><span>→</span><code>sudo apt remove</code></span>
+<strong>Uninstall software packages</strong>
+<span>Removes installed packages from the system.</span>
+<em>Open full guide →</em>
+</a>
+<a class="command-card" data-open-command="windows-update" href="?command=windows-update">
+<span class="mapping-mini"><code>Windows Update</code><span>→</span><code>sudo apt update &amp;&amp; sudo apt upgrade</code></span>
+<strong>Update the system and all software</strong>
+<span>Downloads and installs updates for the OS and all installed packages.</span>
+<em>Open full guide →</em>
+</a>
+<a class="command-card" data-open-command="where" href="?command=where">
+<span class="mapping-mini"><code>where</code><span>→</span><code>which / whereis</code></span>
+<strong>Find where a command is installed</strong>
+<span>Locates the full path of an executable command or program.</span>
+<em>Open full guide →</em>
+</a>
+<a class="command-card" data-open-command="services-msc-net-start" href="?command=services-msc-net-start">
+<span class="mapping-mini"><code>services.msc / net start</code><span>→</span><code>systemctl</code></span>
+<strong>Manage system services</strong>
+<span>Starts, stops, restarts, and checks the status of background services (like Windows Services).</span>
+<em>Open full guide →</em>
+</a>
+<a class="command-card" data-open-command="eventvwr-event-viewer" href="?command=eventvwr-event-viewer">
+<span class="mapping-mini"><code>eventvwr / Event Viewer</code><span>→</span><code>journalctl</code></span>
+<strong>View system logs</strong>
+<span>Reads logs from the systemd journal — the Linux equivalent of Windows Event Viewer.</span>
+<em>Open full guide →</em>
+</a>
+<a class="command-card" data-open-command="sc-query" href="?command=sc-query">
+<span class="mapping-mini"><code>sc query</code><span>→</span><code>systemctl list-units</code></span>
+<strong>List all services and their status</strong>
+<span>Shows all installed services and whether they are running, stopped, or failed.</span>
+<em>Open full guide →</em>
+</a>
+<a class="command-card" data-open-command="net-user" href="?command=net-user">
+<span class="mapping-mini"><code>net user</code><span>→</span><code>useradd / usermod</code></span>
+<strong>Create and manage user accounts</strong>
+<span>Adds new users, changes user properties, and manages user accounts on the system.</span>
+<em>Open full guide →</em>
+</a>
+<a class="command-card" data-open-command="net-localgroup" href="?command=net-localgroup">
+<span class="mapping-mini"><code>net localgroup</code><span>→</span><code>groupadd / groups</code></span>
+<strong>Manage user groups</strong>
+<span>Creates groups, adds users to groups, and lists group memberships.</span>
+<em>Open full guide →</em>
+</a>
+<a class="command-card" data-open-command="net-user-username-passwordreq" href="?command=net-user-username-passwordreq">
+<span class="mapping-mini"><code>net user username /passwordreq</code><span>→</span><code>passwd</code></span>
+<strong>Change user passwords</strong>
+<span>Sets or changes a user account password.</span>
+<em>Open full guide →</em>
+</a>
+<a class="command-card" data-open-command="sort" href="?command=sort">
+<span class="mapping-mini"><code>sort</code><span>→</span><code>sort</code></span>
+<strong>Sort lines of text</strong>
+<span>Sorts the lines of a text file or input alphabetically, numerically, or by other criteria.</span>
+<em>Open full guide →</em>
+</a>
+<a class="command-card" data-open-command="fc" href="?command=fc">
+<span class="mapping-mini"><code>fc</code><span>→</span><code>diff</code></span>
+<strong>Compare two files</strong>
+<span>Compares two files and shows the differences between them line by line.</span>
+<em>Open full guide →</em>
+</a>
+<a class="command-card" data-open-command="wc-word-count-no-windows-equiv" href="?command=wc-word-count-no-windows-equiv">
+<span class="mapping-mini"><code>wc (word count — no Windows equiv)</code><span>→</span><code>wc</code></span>
+<strong>Count words, lines, characters</strong>
+<span>Counts lines, words, and characters in a file or piped input. Very useful in scripts.</span>
+<em>Open full guide →</em>
+</a>
+<a class="command-card" data-open-command="clip-clip-exe" href="?command=clip-clip-exe">
+<span class="mapping-mini"><code>clip / clip.exe</code><span>→</span><code>xclip / xsel</code></span>
+<strong>Copy output to clipboard</strong>
+<span>Pipes command output directly into the clipboard so you can paste it elsewhere.</span>
+<em>Open full guide →</em>
+</a>
+<a class="command-card" data-open-command="msconfig-task-scheduler" href="?command=msconfig-task-scheduler">
+<span class="mapping-mini"><code>msconfig / Task Scheduler</code><span>→</span><code>crontab -e</code></span>
+<strong>Schedule recurring tasks</strong>
+<span>Runs commands or scripts automatically on a schedule — like Windows Task Scheduler.</span>
+<em>Open full guide →</em>
+</a>
+<a class="command-card" data-open-command="msinfo32-dxdiag" href="?command=msinfo32-dxdiag">
+<span class="mapping-mini"><code>msinfo32 / dxdiag</code><span>→</span><code>lshw / inxi</code></span>
+<strong>Full hardware information</strong>
+<span>Displays detailed hardware inventory — CPU, RAM, motherboard, GPU, and more.</span>
+<em>Open full guide →</em>
+</a>
+<a class="command-card" data-open-command="perfmon-resource-monitor" href="?command=perfmon-resource-monitor">
+<span class="mapping-mini"><code>perfmon / Resource Monitor</code><span>→</span><code>vmstat / iostat</code></span>
+<strong>Monitor system performance</strong>
+<span>Shows real-time statistics on CPU, memory, disk I/O, and system activity.</span>
+<em>Open full guide →</em>
+</a>
+<a class="command-card" data-open-command="date-t-and-time-t" href="?command=date-t-and-time-t">
+<span class="mapping-mini"><code>date /t &amp; time /t</code><span>→</span><code>date</code></span>
+<strong>Display or set date and time</strong>
+<span>Shows the current date and time, or sets the system clock.</span>
+<em>Open full guide →</em>
+</a>
+<a class="command-card" data-open-command="doskey-history" href="?command=doskey-history">
+<span class="mapping-mini"><code>doskey /history</code><span>→</span><code>history</code></span>
+<strong>View command history</strong>
+<span>Shows previously run commands. Linux keeps a much longer history than Windows.</span>
+<em>Open full guide →</em>
+</a>
+<a class="command-card" data-open-command="cmd-k-set-title" href="?command=cmd-k-set-title">
+<span class="mapping-mini"><code>cmd /k (set title)</code><span>→</span><code>alias</code></span>
+<strong>Create command shortcuts (aliases)</strong>
+<span>Creates short nicknames for long commands. Add them to ~/.bashrc to make them permanent.</span>
+<em>Open full guide →</em>
+</a>
+<a class="command-card" data-open-command="start-open-file-url" href="?command=start-open-file-url">
+<span class="mapping-mini"><code>start (open file/URL)</code><span>→</span><code>xdg-open</code></span>
+<strong>Open files with default application</strong>
+<span>Opens a file, folder, or URL with the appropriate default application — like double-clicking in the file manager.</span>
+<em>Open full guide →</em>
+</a>
+<a class="command-card" data-open-command="break" href="?command=break">
+<span class="mapping-mini"><code>break</code><span>→</span><code>Ctrl+C</code></span>
+<strong>Interrupt a running command</strong>
+<span>Stops a currently running command or script. Ctrl+C sends SIGINT to the foreground process.</span>
+<em>Open full guide →</em>
+</a>
+<a class="command-card" data-open-command="pause" href="?command=pause">
+<span class="mapping-mini"><code>pause</code><span>→</span><code>read -p</code></span>
+<strong>Pause a script and wait for keypress</strong>
+<span>Halts a script and waits for the user to press a key before continuing. Used frequently in batch files.</span>
+<em>Open full guide →</em>
+</a>
+<a class="command-card" data-open-command="rem" href="?command=rem">
+<span class="mapping-mini"><code>rem / ::</code><span>→</span><code>#</code></span>
+<strong>Add comments to scripts</strong>
+<span>Adds human-readable comments to shell scripts that are ignored during execution.</span>
+<em>Open full guide →</em>
+</a>
+<a class="command-card" data-open-command="exit" href="?command=exit">
+<span class="mapping-mini"><code>exit</code><span>→</span><code>exit</code></span>
+<strong>Exit the shell or return an exit code</strong>
+<span>Closes the current shell session or exits a script, optionally with a numeric return code.</span>
+<em>Open full guide →</em>
+</a>
+<a class="command-card" data-open-command="if" href="?command=if">
+<span class="mapping-mini"><code>if</code><span>→</span><code>if [ condition ]; then ... fi</code></span>
+<strong>Conditional branching in scripts</strong>
+<span>Tests a condition and executes different code depending on whether it is true or false.</span>
+<em>Open full guide →</em>
+</a>
+<a class="command-card" data-open-command="for" href="?command=for">
+<span class="mapping-mini"><code>for</code><span>→</span><code>for ... in ...; do ... done</code></span>
+<strong>Loop over a list or range</strong>
+<span>Repeats a block of commands for each item in a list, range, or set of files.</span>
+<em>Open full guide →</em>
+</a>
+<a class="command-card" data-open-command="while-goto-loop" href="?command=while-goto-loop">
+<span class="mapping-mini"><code>while (goto loop)</code><span>→</span><code>while [ condition ]; do ... done</code></span>
+<strong>Loop while a condition is true</strong>
+<span>Repeatedly executes commands as long as a condition remains true.</span>
+<em>Open full guide →</em>
+</a>
+<a class="command-card" data-open-command="goto" href="?command=goto">
+<span class="mapping-mini"><code>goto</code><span>→</span><code>functions / break / continue</code></span>
+<strong>Control flow — replace GOTO with functions</strong>
+<span>Bash has no GOTO. Use functions, break, continue, or restructure logic with loops and conditionals.</span>
+<em>Open full guide →</em>
+</a>
+<a class="command-card" data-open-command="shift" href="?command=shift">
+<span class="mapping-mini"><code>shift</code><span>→</span><code>shift</code></span>
+<strong>Shift script argument positions</strong>
+<span>Shifts positional parameters ($1, $2...) left by one. Used to process command-line arguments in scripts.</span>
+<em>Open full guide →</em>
+</a>
+<a class="command-card" data-open-command="errorlevel" href="?command=errorlevel">
+<span class="mapping-mini"><code>%errorlevel%</code><span>→</span><code>$?</code></span>
+<strong>Check command success or failure exit code</strong>
+<span>Reads the exit status of the last command. 0 means success; any non-zero value means failure.</span>
+<em>Open full guide →</em>
+</a>
+<a class="command-card" data-open-command="set-a-arithmetic" href="?command=set-a-arithmetic">
+<span class="mapping-mini"><code>set /a (arithmetic)</code><span>→</span><code>$(( expression ))</code></span>
+<strong>Perform arithmetic calculations</strong>
+<span>Evaluates mathematical expressions in scripts or at the command line.</span>
+<em>Open full guide →</em>
+</a>
+<a class="command-card" data-open-command="title" href="?command=title">
+<span class="mapping-mini"><code>title</code><span>→</span><code>echo -ne "\033]0;My Title\007"</code></span>
+<strong>Set the terminal window title</strong>
+<span>Changes the title text shown in the terminal emulator's title bar.</span>
+<em>Open full guide →</em>
+</a>
+<a class="command-card" data-open-command="path" href="?command=path">
+<span class="mapping-mini"><code>path</code><span>→</span><code>echo $PATH / export PATH</code></span>
+<strong>View or modify the command search path</strong>
+<span>Shows or modifies the list of directories the shell searches when you type a command.</span>
+<em>Open full guide →</em>
+</a>
+<a class="command-card" data-open-command="rd-rmdir" href="?command=rd-rmdir">
+<span class="mapping-mini"><code>rd / rmdir</code><span>→</span><code>rmdir / rm -r</code></span>
+<strong>Remove directories</strong>
+<span>Deletes empty directories (rmdir) or directories with all their contents (rm -r).</span>
+<em>Open full guide →</em>
+</a>
+<a class="command-card" data-open-command="copy-con" href="?command=copy-con">
+<span class="mapping-mini"><code>copy con</code><span>→</span><code>cat &gt; filename</code></span>
+<strong>Create a file from keyboard input</strong>
+<span>Lets you type content directly into a new file from the terminal, without opening an editor.</span>
+<em>Open full guide →</em>
+</a>
+<a class="command-card" data-open-command="verify-certutil-hashfile" href="?command=verify-certutil-hashfile">
+<span class="mapping-mini"><code>verify / certutil -hashfile</code><span>→</span><code>sha256sum</code></span>
+<strong>Verify file integrity with checksums</strong>
+<span>Generates or checks checksums to verify that files have not been corrupted or tampered with.</span>
+<em>Open full guide →</em>
+</a>
+<a class="command-card" data-open-command="mklink" href="?command=mklink">
+<span class="mapping-mini"><code>mklink</code><span>→</span><code>ln -s</code></span>
+<strong>Create symbolic and hard links</strong>
+<span>Creates symbolic links (shortcuts) or hard links pointing to files or directories.</span>
+<em>Open full guide →</em>
+</a>
+<a class="command-card" data-open-command="cacls-icacls" href="?command=cacls-icacls">
+<span class="mapping-mini"><code>cacls / icacls</code><span>→</span><code>getfacl / setfacl</code></span>
+<strong>Advanced file access control lists (ACL)</strong>
+<span>Views and sets fine-grained file permissions beyond the basic owner/group/other model.</span>
+<em>Open full guide →</em>
+</a>
+<a class="command-card" data-open-command="openfiles" href="?command=openfiles">
+<span class="mapping-mini"><code>openfiles</code><span>→</span><code>lsof</code></span>
+<strong>List open files and which process uses them</strong>
+<span>Shows which files, sockets, and devices are currently open and by which processes.</span>
+<em>Open full guide →</em>
+</a>
+<a class="command-card" data-open-command="label" href="?command=label">
+<span class="mapping-mini"><code>label</code><span>→</span><code>e2label / tune2fs -L</code></span>
+<strong>Set or view disk volume label</strong>
+<span>Assigns a human-readable name (label) to a disk partition for easier identification.</span>
+<em>Open full guide →</em>
+</a>
+<a class="command-card" data-open-command="wbadmin-disk-image" href="?command=wbadmin-disk-image">
+<span class="mapping-mini"><code>wbadmin / disk image</code><span>→</span><code>dd</code></span>
+<strong>Create raw byte-for-byte disk images</strong>
+<span>Creates a complete raw copy of an entire disk or partition — useful for backups, imaging, and forensics.</span>
+<em>Open full guide →</em>
+</a>
+<a class="command-card" data-open-command="diskpart-clean-clean-all" href="?command=diskpart-clean-clean-all">
+<span class="mapping-mini"><code>diskpart clean / clean all</code><span>→</span><code>wipefs / shred</code></span>
+<strong>Wipe or sanitise a disk</strong>
+<span>Removes filesystem signatures from a disk or securely overwrites all data to prevent recovery.</span>
+<em>Open full guide →</em>
+</a>
+<a class="command-card" data-open-command="dir-s-b-recursive-list" href="?command=dir-s-b-recursive-list">
+<span class="mapping-mini"><code>dir /s /b (recursive list)</code><span>→</span><code>find . -type f</code></span>
+<strong>List all files recursively</strong>
+<span>Recursively lists every file in a directory tree, one per line — no directories, just files.</span>
+<em>Open full guide →</em>
+</a>
+<a class="command-card" data-open-command="dir-od-sort-by-date" href="?command=dir-od-sort-by-date">
+<span class="mapping-mini"><code>dir /od (sort by date)</code><span>→</span><code>find . -mtime -1</code></span>
+<strong>Find recently modified files</strong>
+<span>Locates files modified within a specific time window.</span>
+<em>Open full guide →</em>
+</a>
+<a class="command-card" data-open-command="findstr-r-regex" href="?command=findstr-r-regex">
+<span class="mapping-mini"><code>findstr /r (regex)</code><span>→</span><code>grep -E</code></span>
+<strong>Search using extended regular expressions</strong>
+<span>Searches text using extended regular expressions for complex pattern matching.</span>
+<em>Open full guide →</em>
+</a>
+<a class="command-card" data-open-command="type-first-lines" href="?command=type-first-lines">
+<span class="mapping-mini"><code>type (first lines)</code><span>→</span><code>head</code></span>
+<strong>Display the first lines of a file</strong>
+<span>Shows only the first N lines of a file — useful for quickly previewing large files.</span>
+<em>Open full guide →</em>
+</a>
+<a class="command-card" data-open-command="type-end-of-file-logs" href="?command=type-end-of-file-logs">
+<span class="mapping-mini"><code>type (end of file / logs)</code><span>→</span><code>tail</code></span>
+<strong>Display the last lines of a file</strong>
+<span>Shows the last N lines of a file. With -f, follows the file in real-time — essential for watching logs.</span>
+<em>Open full guide →</em>
+</a>
+<a class="command-card" data-open-command="findstr-v-invert" href="?command=findstr-v-invert">
+<span class="mapping-mini"><code>findstr /v (invert)</code><span>→</span><code>tac</code></span>
+<strong>Print file in reverse line order</strong>
+<span>Outputs a file with lines in reverse order — last line first. The name is 'cat' backwards.</span>
+<em>Open full guide →</em>
+</a>
+<a class="command-card" data-open-command="sort-unique" href="?command=sort-unique">
+<span class="mapping-mini"><code>sort /unique</code><span>→</span><code>sort | uniq</code></span>
+<strong>Filter duplicate adjacent lines</strong>
+<span>Removes or counts duplicate lines. Must be used after sorting — it only removes adjacent duplicates.</span>
+<em>Open full guide →</em>
+</a>
+<a class="command-card" data-open-command="findstr-character-replace-n-a" href="?command=findstr-character-replace-n-a">
+<span class="mapping-mini"><code>findstr (character replace — n/a)</code><span>→</span><code>tr</code></span>
+<strong>Translate or delete characters</strong>
+<span>Replaces, deletes, or squeezes individual characters in text — a character-level find and replace.</span>
+<em>Open full guide →</em>
+</a>
+<a class="command-card" data-open-command="for-f-field-parsing" href="?command=for-f-field-parsing">
+<span class="mapping-mini"><code>for /f (field parsing)</code><span>→</span><code>cut</code></span>
+<strong>Extract columns or fields from text</strong>
+<span>Cuts out sections of each line — by delimiter-separated field number or character position.</span>
+<em>Open full guide →</em>
+</a>
+<a class="command-card" data-open-command="type-awk-no-equiv" href="?command=type-awk-no-equiv">
+<span class="mapping-mini"><code>type (awk — no equiv)</code><span>→</span><code>awk</code></span>
+<strong>Process and extract columns from structured text</strong>
+<span>A powerful text-processing tool that splits lines into fields and lets you extract, transform, and report on structured text.</span>
+<em>Open full guide →</em>
+</a>
+<a class="command-card" data-open-command="type-file-clip-base64-no-equiv" href="?command=type-file-clip-base64-no-equiv">
+<span class="mapping-mini"><code>type file | clip (base64 — no equiv)</code><span>→</span><code>base64</code></span>
+<strong>Encode or decode Base64</strong>
+<span>Converts binary data to Base64 text encoding and back. Common in APIs, certificates, and email attachments.</span>
+<em>Open full guide →</em>
+</a>
+<a class="command-card" data-open-command="ipconfig-flushdns" href="?command=ipconfig-flushdns">
+<span class="mapping-mini"><code>ipconfig /flushdns</code><span>→</span><code>systemd-resolve --flush-caches</code></span>
+<strong>Flush the DNS resolver cache</strong>
+<span>Clears locally cached DNS records, forcing fresh lookups on the next DNS request.</span>
+<em>Open full guide →</em>
+</a>
+<a class="command-card" data-open-command="ipconfig-release-and-renew" href="?command=ipconfig-release-and-renew">
+<span class="mapping-mini"><code>ipconfig /release and /renew</code><span>→</span><code>dhclient</code></span>
+<strong>Release and renew DHCP lease</strong>
+<span>Releases the current DHCP IP address and requests a new one from the DHCP server.</span>
+<em>Open full guide →</em>
+</a>
+<a class="command-card" data-open-command="net-view" href="?command=net-view">
+<span class="mapping-mini"><code>net view</code><span>→</span><code>smbclient -L / nmap -sn</code></span>
+<strong>View computers and shares on the network</strong>
+<span>Lists computers visible on the local network and shared resources on a specific host.</span>
+<em>Open full guide →</em>
+</a>
+<a class="command-card" data-open-command="net-time-w32tm" href="?command=net-time-w32tm">
+<span class="mapping-mini"><code>net time / w32tm</code><span>→</span><code>timedatectl</code></span>
+<strong>View and sync system time via NTP</strong>
+<span>Shows time synchronisation status and synchronises the system clock with an NTP time server.</span>
+<em>Open full guide →</em>
+</a>
+<a class="command-card" data-open-command="getmac" href="?command=getmac">
+<span class="mapping-mini"><code>getmac</code><span>→</span><code>ip link show</code></span>
+<strong>Display MAC addresses of network interfaces</strong>
+<span>Shows the hardware (MAC) address of each network interface card.</span>
+<em>Open full guide →</em>
+</a>
+<a class="command-card" data-open-command="netsh-int-ip-set-address-static-ip" href="?command=netsh-int-ip-set-address-static-ip">
+<span class="mapping-mini"><code>netsh int ip set address (static IP)</code><span>→</span><code>nmcli con mod</code></span>
+<strong>Configure a static IP address</strong>
+<span>Assigns a permanent static IP address to a network interface using NetworkManager.</span>
+<em>Open full guide →</em>
+</a>
+<a class="command-card" data-open-command="netsh-advfirewall-firewall-rules" href="?command=netsh-advfirewall-firewall-rules">
+<span class="mapping-mini"><code>netsh advfirewall (firewall rules)</code><span>→</span><code>ufw</code></span>
+<strong>Manage firewall rules</strong>
+<span>Controls which network traffic is allowed through the system's firewall.</span>
+<em>Open full guide →</em>
+</a>
+<a class="command-card" data-open-command="pathping" href="?command=pathping">
+<span class="mapping-mini"><code>pathping</code><span>→</span><code>mtr</code></span>
+<strong>Combined ping and traceroute with statistics</strong>
+<span>Continuously monitors each network hop showing real-time packet loss and latency per hop.</span>
+<em>Open full guide →</em>
+</a>
+<a class="command-card" data-open-command="nmap-nmap-for-windows" href="?command=nmap-nmap-for-windows">
+<span class="mapping-mini"><code>nmap (Nmap for Windows)</code><span>→</span><code>nmap</code></span>
+<strong>Network port scanner and host discovery</strong>
+<span>Scans networks and hosts to discover open ports, running services, OS versions, and security issues.</span>
+<em>Open full guide →</em>
+</a>
+<a class="command-card" data-open-command="logoff" href="?command=logoff">
+<span class="mapping-mini"><code>logoff</code><span>→</span><code>logout / pkill -KILL -u username</code></span>
+<strong>Log off the current user session</strong>
+<span>Ends the current user session, closing all running processes owned by that user.</span>
+<em>Open full guide →</em>
+</a>
+<a class="command-card" data-open-command="hibernate" href="?command=hibernate">
+<span class="mapping-mini"><code>hibernate</code><span>→</span><code>systemctl hibernate</code></span>
+<strong>Hibernate — save state to disk and power off</strong>
+<span>Saves the current RAM state to disk and powers off. On next boot, the session resumes exactly where you left off.</span>
+<em>Open full guide →</em>
+</a>
+<a class="command-card" data-open-command="cleanmgr-disk-cleanup" href="?command=cleanmgr-disk-cleanup">
+<span class="mapping-mini"><code>cleanmgr (Disk Cleanup)</code><span>→</span><code>apt clean / journalctl --vacuum-size</code></span>
+<strong>Free up disk space</strong>
+<span>Removes temporary files, old package caches, and other items that can safely be deleted to recover disk space.</span>
+<em>Open full guide →</em>
+</a>
+<a class="command-card" data-open-command="msconfig-systemd-analyze" href="?command=msconfig-systemd-analyze">
+<span class="mapping-mini"><code>msconfig / systemd-analyze</code><span>→</span><code>systemd-analyze</code></span>
+<strong>Analyse system boot performance</strong>
+<span>Shows total boot time and which services took the longest to start.</span>
+<em>Open full guide →</em>
+</a>
+<a class="command-card" data-open-command="regsvr32-register-dll" href="?command=regsvr32-register-dll">
+<span class="mapping-mini"><code>regsvr32 (register DLL)</code><span>→</span><code>sudo ldconfig</code></span>
+<strong>Update shared library cache</strong>
+<span>Updates the dynamic linker cache after installing new shared libraries (.so files) — the Linux equivalent of registering a DLL.</span>
+<em>Open full guide →</em>
+</a>
+<a class="command-card" data-open-command="net-session-query-user" href="?command=net-session-query-user">
+<span class="mapping-mini"><code>net session / query user</code><span>→</span><code>who / w / last</code></span>
+<strong>See who is currently logged in</strong>
+<span>Lists currently logged-in users, what they are doing, and recent login history.</span>
+<em>Open full guide →</em>
+</a>
+<a class="command-card" data-open-command="sc-create-sc-delete" href="?command=sc-create-sc-delete">
+<span class="mapping-mini"><code>sc create / sc delete</code><span>→</span><code>systemd unit files in /etc/systemd/system/</code></span>
+<strong>Create a custom systemd service</strong>
+<span>Defines a new system service by creating a unit file, then enables and starts it.</span>
+<em>Open full guide →</em>
+</a>
+<a class="command-card" data-open-command="wmic-bios-get-serialnumber" href="?command=wmic-bios-get-serialnumber">
+<span class="mapping-mini"><code>wmic bios get serialnumber</code><span>→</span><code>sudo dmidecode</code></span>
+<strong>Read BIOS and hardware serial numbers</strong>
+<span>Reads hardware information from the system BIOS/UEFI including serial numbers, model numbers, and firmware versions.</span>
+<em>Open full guide →</em>
+</a>
+<a class="command-card" data-open-command="powercfg-batteryreport" href="?command=powercfg-batteryreport">
+<span class="mapping-mini"><code>powercfg /batteryreport</code><span>→</span><code>acpi / upower</code></span>
+<strong>Battery status and health</strong>
+<span>Shows battery charge level, time remaining, and health information on laptops.</span>
+<em>Open full guide →</em>
+</a>
+<a class="command-card" data-open-command="wmic-temperature-core-temp" href="?command=wmic-temperature-core-temp">
+<span class="mapping-mini"><code>wmic temperature / Core Temp</code><span>→</span><code>sensors</code></span>
+<strong>Read CPU and hardware temperatures</strong>
+<span>Displays temperature readings from CPU, GPU, and motherboard sensors.</span>
+<em>Open full guide →</em>
+</a>
+<a class="command-card" data-open-command="winver-about-windows" href="?command=winver-about-windows">
+<span class="mapping-mini"><code>winver / About Windows</code><span>→</span><code>neofetch / fastfetch</code></span>
+<strong>Display OS info with ASCII art logo</strong>
+<span>Shows system information in a visually attractive format — distro, kernel, uptime, CPU, RAM, and more.</span>
+<em>Open full guide →</em>
+</a>
+<a class="command-card" data-open-command="uptime-task-manager-performance" href="?command=uptime-task-manager-performance">
+<span class="mapping-mini"><code>uptime (Task Manager → Performance)</code><span>→</span><code>uptime</code></span>
+<strong>Show how long the system has been running</strong>
+<span>Displays how long the system has been running since the last boot, along with current CPU load averages.</span>
+<em>Open full guide →</em>
+</a>
+<a class="command-card" data-open-command="devmgmt-msc-device-manager" href="?command=devmgmt-msc-device-manager">
+<span class="mapping-mini"><code>devmgmt.msc (Device Manager)</code><span>→</span><code>lspci / lsusb / lshw</code></span>
+<strong>View hardware devices and drivers</strong>
+<span>Lists hardware devices, their drivers, and status — the Linux equivalent of Device Manager.</span>
+<em>Open full guide →</em>
+</a>
+<a class="command-card" data-open-command="taskmgr-task-manager" href="?command=taskmgr-task-manager">
+<span class="mapping-mini"><code>taskmgr (Task Manager)</code><span>→</span><code>htop / btop</code></span>
+<strong>Interactive process and resource monitor</strong>
+<span>Opens a real-time interactive view of CPU, memory, disk, and network usage with process management.</span>
+<em>Open full guide →</em>
+</a>
+<a class="command-card" data-open-command="wmic-memorychip-get" href="?command=wmic-memorychip-get">
+<span class="mapping-mini"><code>wmic memorychip get</code><span>→</span><code>sudo dmidecode -t memory</code></span>
+<strong>Display physical RAM module details</strong>
+<span>Shows information about physical RAM modules including size, speed, type, and which slots are populated.</span>
+<em>Open full guide →</em>
+</a>
+<a class="command-card" data-open-command="wmic-startup-msconfig-startup" href="?command=wmic-startup-msconfig-startup">
+<span class="mapping-mini"><code>wmic startup / msconfig Startup</code><span>→</span><code>systemctl list-unit-files --state=enabled</code></span>
+<strong>List programs set to run at startup</strong>
+<span>Shows all services and programs configured to start automatically when the system boots.</span>
+<em>Open full guide →</em>
+</a>
+<a class="command-card" data-open-command="dpkg-i-msiexec-i" href="?command=dpkg-i-msiexec-i">
+<span class="mapping-mini"><code>dpkg -i / msiexec /i</code><span>→</span><code>apt install ./package.deb</code></span>
+<strong>Install a manually downloaded .deb package</strong>
+<span>Installs a local .deb package file you have downloaded manually, rather than from a repository.</span>
+<em>Open full guide →</em>
+</a>
+<a class="command-card" data-open-command="gpupdate-force" href="?command=gpupdate-force">
+<span class="mapping-mini"><code>gpupdate /force</code><span>→</span><code>puppet / ansible / chef</code></span>
+<strong>Apply configuration management policies</strong>
+<span>Applies centralised configuration policies — the Linux equivalent of Group Policy Update.</span>
+<em>Open full guide →</em>
+</a>
+<a class="command-card" data-open-command="regedit-windows-registry" href="?command=regedit-windows-registry">
+<span class="mapping-mini"><code>regedit (Windows Registry)</code><span>→</span><code>/etc/ and ~/.config/</code></span>
+<strong>System and application configuration storage</strong>
+<span>Linux stores all configuration in plain text files rather than a registry. System config is in /etc/, user config is in ~/.config/ and dotfiles.</span>
+<em>Open full guide →</em>
+</a>
+<a class="command-card" data-open-command="assoc-ftype-file-extension-to-program" href="?command=assoc-ftype-file-extension-to-program">
+<span class="mapping-mini"><code>assoc / ftype (file extension to program)</code><span>→</span><code>xdg-mime</code></span>
+<strong>Manage file type associations</strong>
+<span>Views or changes which application opens files of a particular type.</span>
+<em>Open full guide →</em>
+</a>
+<a class="command-card" data-open-command="compress-archive" href="?command=compress-archive">
+<span class="mapping-mini"><code>Compress-Archive</code><span>→</span><code>zip -r archive.zip folder/</code></span>
+<strong>Create a ZIP archive</strong>
+<span>Compresses files or folders into a standard ZIP archive.</span>
+<em>Open full guide →</em>
+</a>
+<a class="command-card" data-open-command="expand-archive" href="?command=expand-archive">
+<span class="mapping-mini"><code>Expand-Archive</code><span>→</span><code>unzip archive.zip</code></span>
+<strong>Extract a ZIP archive</strong>
+<span>Extracts files from a ZIP archive into the current directory or a chosen destination.</span>
+<em>Open full guide →</em>
+</a>
+<a class="command-card" data-open-command="tar-exe-cf" href="?command=tar-exe-cf">
+<span class="mapping-mini"><code>tar.exe -cf</code><span>→</span><code>tar -cf archive.tar folder/</code></span>
+<strong>Create a TAR archive</strong>
+<span>Combines files and directories into a TAR archive without necessarily compressing them.</span>
+<em>Open full guide →</em>
+</a>
+<a class="command-card" data-open-command="tar-exe-xf" href="?command=tar-exe-xf">
+<span class="mapping-mini"><code>tar.exe -xf</code><span>→</span><code>tar -xf archive.tar</code></span>
+<strong>Extract a TAR archive</strong>
+<span>Extracts TAR, tar.gz, tar.xz and other tar-based archives.</span>
+<em>Open full guide →</em>
+</a>
+<a class="command-card" data-open-command="compact-c" href="?command=compact-c">
+<span class="mapping-mini"><code>compact /c</code><span>→</span><code>gzip file.log</code></span>
+<strong>Compress individual files</strong>
+<span>Compresses individual files using gzip or xz to reduce their stored size.</span>
+<em>Open full guide →</em>
+</a>
+<a class="command-card" data-open-command="compact-u" href="?command=compact-u">
+<span class="mapping-mini"><code>compact /u</code><span>→</span><code>gunzip file.log.gz</code></span>
+<strong>Decompress individual files</strong>
+<span>Restores files previously compressed with gzip or xz.</span>
+<em>Open full guide →</em>
+</a>
+<a class="command-card" data-open-command="7z-a" href="?command=7z-a">
+<span class="mapping-mini"><code>7z a</code><span>→</span><code>7z a archive.7z folder/</code></span>
+<strong>Create a 7-Zip archive</strong>
+<span>Creates 7z, ZIP and other supported archive formats with the 7-Zip command-line tool.</span>
+<em>Open full guide →</em>
+</a>
+<a class="command-card" data-open-command="7z-x" href="?command=7z-x">
+<span class="mapping-mini"><code>7z x</code><span>→</span><code>7z x archive.7z</code></span>
+<strong>Extract a 7-Zip archive</strong>
+<span>Extracts 7z, ZIP, RAR and many other archive formats while preserving directory paths.</span>
+<em>Open full guide →</em>
+</a>
+<a class="command-card" data-open-command="powershell-new-item-itemtype-file" href="?command=powershell-new-item-itemtype-file">
+<span class="mapping-mini"><code>PowerShell New-Item -ItemType File</code><span>→</span><code>touch filename.txt</code></span>
+<strong>Create an empty file</strong>
+<span>Creates a new empty file or updates an existing file timestamp.</span>
+<em>Open full guide →</em>
+</a>
+<a class="command-card" data-open-command="powershell-get-item" href="?command=powershell-get-item">
+<span class="mapping-mini"><code>PowerShell Get-Item</code><span>→</span><code>stat filename.txt</code></span>
+<strong>Inspect file metadata</strong>
+<span>Displays detailed metadata such as file size, permissions, timestamps, owner and inode number.</span>
+<em>Open full guide →</em>
+</a>
+<a class="command-card" data-open-command="powershell-resolve-path" href="?command=powershell-resolve-path">
+<span class="mapping-mini"><code>PowerShell Resolve-Path</code><span>→</span><code>realpath path/to/file</code></span>
+<strong>Resolve an absolute path</strong>
+<span>Converts a relative path or symbolic link into its normalized absolute path.</span>
+<em>Open full guide →</em>
+</a>
+<a class="command-card" data-open-command="fsutil-file-createnew" href="?command=fsutil-file-createnew">
+<span class="mapping-mini"><code>fsutil file createnew</code><span>→</span><code>truncate -s 100M test.img</code></span>
+<strong>Create a file of a chosen size</strong>
+<span>Creates an empty or preallocated file with a specific size.</span>
+<em>Open full guide →</em>
+</a>
+<a class="command-card" data-open-command="subst" href="?command=subst">
+<span class="mapping-mini"><code>subst</code><span>→</span><code>sudo mount --bind /source /mountpoint</code></span>
+<strong>Map a directory to another path</strong>
+<span>Makes an existing directory tree accessible at a second mount point.</span>
+<em>Open full guide →</em>
+</a>
+<a class="command-card" data-open-command="takeown" href="?command=takeown">
+<span class="mapping-mini"><code>takeown</code><span>→</span><code>sudo chown user:group path</code></span>
+<strong>Change file ownership</strong>
+<span>Changes the user or group that owns a file or directory.</span>
+<em>Open full guide →</em>
+</a>
+<a class="command-card" data-open-command="robocopy" href="?command=robocopy">
+<span class="mapping-mini"><code>robocopy</code><span>→</span><code>rsync -avh source/ destination/</code></span>
+<strong>Synchronize directory trees</strong>
+<span>Copies and synchronizes directories efficiently, transferring only changed content when possible.</span>
+<em>Open full guide →</em>
+</a>
+<a class="command-card" data-open-command="powershell-set-content" href="?command=powershell-set-content">
+<span class="mapping-mini"><code>PowerShell Set-Content</code><span>→</span><code>printf "%s
+" "text" &gt; file.txt</code></span>
+<strong>Replace file contents</strong>
+<span>Writes new content to a file, replacing the previous contents.</span>
+<em>Open full guide →</em>
+</a>
+<a class="command-card" data-open-command="powershell-add-content" href="?command=powershell-add-content">
+<span class="mapping-mini"><code>PowerShell Add-Content</code><span>→</span><code>printf "%s
+" "text" | tee -a file.txt</code></span>
+<strong>Append content to a file</strong>
+<span>Adds new text to the end of an existing file without replacing its current contents.</span>
+<em>Open full guide →</em>
+</a>
+<a class="command-card" data-open-command="powershell-get-filehash" href="?command=powershell-get-filehash">
+<span class="mapping-mini"><code>PowerShell Get-FileHash</code><span>→</span><code>sha256sum filename.iso</code></span>
+<strong>Calculate a file checksum</strong>
+<span>Calculates a cryptographic checksum used to verify downloads and detect file changes.</span>
+<em>Open full guide →</em>
+</a>
+<a class="command-card" data-open-command="powershell-test-path" href="?command=powershell-test-path">
+<span class="mapping-mini"><code>PowerShell Test-Path</code><span>→</span><code>test -e path</code></span>
+<strong>Check whether a path exists</strong>
+<span>Tests whether a file, directory or other path exists for use in shell scripts.</span>
+<em>Open full guide →</em>
+</a>
+<a class="command-card" data-open-command="dir-b" href="?command=dir-b">
+<span class="mapping-mini"><code>dir /b</code><span>→</span><code>ls -1</code></span>
+<strong>List names only</strong>
+<span>Prints one file or directory name per line without detailed metadata.</span>
+<em>Open full guide →</em>
+</a>
+<a class="command-card" data-open-command="arp-a" href="?command=arp-a">
+<span class="mapping-mini"><code>arp -a</code><span>→</span><code>ip neigh show</code></span>
+<strong>Show the neighbor table</strong>
+<span>Displays recently discovered IP-to-MAC address mappings for devices on local networks.</span>
+<em>Open full guide →</em>
+</a>
+<a class="command-card" data-open-command="route-print" href="?command=route-print">
+<span class="mapping-mini"><code>route print</code><span>→</span><code>ip route show</code></span>
+<strong>Show the routing table</strong>
+<span>Displays routes used to decide where network traffic should be sent.</span>
+<em>Open full guide →</em>
+</a>
+<a class="command-card" data-open-command="hostname" href="?command=hostname">
+<span class="mapping-mini"><code>hostname</code><span>→</span><code>hostnamectl</code></span>
+<strong>Show or change the computer name</strong>
+<span>Displays the current host name and, with administrator privileges, changes the persistent system host name.</span>
+<em>Open full guide →</em>
+</a>
+<a class="command-card" data-open-command="netsh-interface-show-interface" href="?command=netsh-interface-show-interface">
+<span class="mapping-mini"><code>netsh interface show interface</code><span>→</span><code>ip link show</code></span>
+<strong>List network interfaces</strong>
+<span>Displays network interfaces and whether each link is up or down.</span>
+<em>Open full guide →</em>
+</a>
+<a class="command-card" data-open-command="netsh-wlan-show-interfaces" href="?command=netsh-wlan-show-interfaces">
+<span class="mapping-mini"><code>netsh wlan show interfaces</code><span>→</span><code>nmcli device show</code></span>
+<strong>Inspect the active Wi-Fi connection</strong>
+<span>Shows wireless interfaces, connection state, SSID, signal and other Wi-Fi information.</span>
+<em>Open full guide →</em>
+</a>
+<a class="command-card" data-open-command="netsh-wlan-show-networks" href="?command=netsh-wlan-show-networks">
+<span class="mapping-mini"><code>netsh wlan show networks</code><span>→</span><code>nmcli device wifi list</code></span>
+<strong>Scan for nearby Wi-Fi networks</strong>
+<span>Lists visible wireless networks, channels, signal strength and security information.</span>
+<em>Open full guide →</em>
+</a>
+<a class="command-card" data-open-command="test-netconnection" href="?command=test-netconnection">
+<span class="mapping-mini"><code>Test-NetConnection</code><span>→</span><code>nc -vz host port</code></span>
+<strong>Test a TCP port or web endpoint</strong>
+<span>Checks whether a remote host and port accept connections, or whether an HTTP endpoint responds.</span>
+<em>Open full guide →</em>
+</a>
+<a class="command-card" data-open-command="resolve-dnsname" href="?command=resolve-dnsname">
+<span class="mapping-mini"><code>Resolve-DnsName</code><span>→</span><code>dig example.com</code></span>
+<strong>Query DNS records</strong>
+<span>Looks up DNS records such as A, AAAA, MX, TXT and NS entries.</span>
+<em>Open full guide →</em>
+</a>
+<a class="command-card" data-open-command="powershell-invoke-webrequest" href="?command=powershell-invoke-webrequest">
+<span class="mapping-mini"><code>PowerShell Invoke-WebRequest</code><span>→</span><code>curl -LO URL</code></span>
+<strong>Download or request web content</strong>
+<span>Makes HTTP requests, downloads files and inspects server responses.</span>
+<em>Open full guide →</em>
+</a>
+<a class="command-card" data-open-command="bitsadmin-transfer" href="?command=bitsadmin-transfer">
+<span class="mapping-mini"><code>bitsadmin /transfer</code><span>→</span><code>wget -c URL</code></span>
+<strong>Download a file non-interactively</strong>
+<span>Downloads files from HTTP, HTTPS or FTP sources from a script or terminal session.</span>
+<em>Open full guide →</em>
+</a>
+<a class="command-card" data-open-command="telnet" href="?command=telnet">
+<span class="mapping-mini"><code>telnet</code><span>→</span><code>nc host port</code></span>
+<strong>Open a basic TCP connection</strong>
+<span>Connects to a TCP host and port for simple protocol testing and troubleshooting.</span>
+<em>Open full guide →</em>
+</a>
+<a class="command-card" data-open-command="ssh" href="?command=ssh">
+<span class="mapping-mini"><code>ssh</code><span>→</span><code>ssh user@host</code></span>
+<strong>Open a secure remote shell</strong>
+<span>Connects securely to a remote Linux, Unix or SSH-enabled system.</span>
+<em>Open full guide →</em>
+</a>
+<a class="command-card" data-open-command="scp" href="?command=scp">
+<span class="mapping-mini"><code>scp</code><span>→</span><code>scp file user@host:/path/</code></span>
+<strong>Copy files over SSH</strong>
+<span>Transfers files or directories securely between local and remote systems.</span>
+<em>Open full guide →</em>
+</a>
+<a class="command-card" data-open-command="pktmon" href="?command=pktmon">
+<span class="mapping-mini"><code>pktmon</code><span>→</span><code>sudo tcpdump -i any</code></span>
+<strong>Capture network packets</strong>
+<span>Captures packets from network interfaces for troubleshooting and protocol analysis.</span>
+<em>Open full guide →</em>
+</a>
+<a class="command-card" data-open-command="netsh-winhttp-show-proxy" href="?command=netsh-winhttp-show-proxy">
+<span class="mapping-mini"><code>netsh winhttp show proxy</code><span>→</span><code>env | grep -i proxy</code></span>
+<strong>Inspect proxy settings</strong>
+<span>Shows proxy environment variables used by command-line applications and package managers.</span>
+<em>Open full guide →</em>
+</a>
+<a class="command-card" data-open-command="diskmgmt-msc" href="?command=diskmgmt-msc">
+<span class="mapping-mini"><code>diskmgmt.msc</code><span>→</span><code>gparted</code></span>
+<strong>Manage disks graphically</strong>
+<span>Provides a graphical interface for viewing disks, creating partitions, formatting volumes and managing mounts.</span>
+<em>Open full guide →</em>
+</a>
+<a class="command-card" data-open-command="fsutil-volume-diskfree" href="?command=fsutil-volume-diskfree">
+<span class="mapping-mini"><code>fsutil volume diskfree</code><span>→</span><code>df -h</code></span>
+<strong>Show free filesystem space</strong>
+<span>Displays used and available capacity for mounted filesystems.</span>
+<em>Open full guide →</em>
+</a>
+<a class="command-card" data-open-command="powershell-get-volume" href="?command=powershell-get-volume">
+<span class="mapping-mini"><code>PowerShell Get-Volume</code><span>→</span><code>lsblk -f</code></span>
+<strong>List volumes and filesystems</strong>
+<span>Shows block devices, filesystem types, labels, UUIDs and mount points.</span>
+<em>Open full guide →</em>
+</a>
+<a class="command-card" data-open-command="powershell-get-physicaldisk" href="?command=powershell-get-physicaldisk">
+<span class="mapping-mini"><code>PowerShell Get-PhysicalDisk</code><span>→</span><code>lsblk -d -o NAME,MODEL,SIZE,ROTA,TRAN</code></span>
+<strong>Inspect physical drives</strong>
+<span>Displays physical disks, model names, sizes, transport types and health information.</span>
+<em>Open full guide →</em>
+</a>
+<a class="command-card" data-open-command="defrag" href="?command=defrag">
+<span class="mapping-mini"><code>defrag</code><span>→</span><code>sudo fstrim -av</code></span>
+<strong>Optimize storage maintenance</strong>
+<span>Discards unused SSD blocks or defragments an ext4 filesystem when appropriate.</span>
+<em>Open full guide →</em>
+</a>
+<a class="command-card" data-open-command="manage-bde" href="?command=manage-bde">
+<span class="mapping-mini"><code>manage-bde</code><span>→</span><code>sudo cryptsetup luksOpen /dev/sdb1 secure</code></span>
+<strong>Manage encrypted volumes</strong>
+<span>Creates, opens and closes LUKS-encrypted Linux block devices.</span>
+<em>Open full guide →</em>
+</a>
+<a class="command-card" data-open-command="mountvol" href="?command=mountvol">
+<span class="mapping-mini"><code>mountvol</code><span>→</span><code>findmnt</code></span>
+<strong>View or manage mount points</strong>
+<span>Lists mounted filesystems and attaches or detaches a filesystem from the directory tree.</span>
+<em>Open full guide →</em>
+</a>
+<a class="command-card" data-open-command="wmic-diskdrive-get-status" href="?command=wmic-diskdrive-get-status">
+<span class="mapping-mini"><code>wmic diskdrive get status</code><span>→</span><code>sudo smartctl -H /dev/sda</code></span>
+<strong>Check drive health</strong>
+<span>Reads SMART health status and diagnostics reported by a physical disk.</span>
+<em>Open full guide →</em>
+</a>
+<a class="command-card" data-open-command="powershell-get-process" href="?command=powershell-get-process">
+<span class="mapping-mini"><code>PowerShell Get-Process</code><span>→</span><code>ps aux</code></span>
+<strong>Find running processes</strong>
+<span>Lists running processes or searches for processes by name.</span>
+<em>Open full guide →</em>
+</a>
+<a class="command-card" data-open-command="powershell-stop-process" href="?command=powershell-stop-process">
+<span class="mapping-mini"><code>PowerShell Stop-Process</code><span>→</span><code>kill PID</code></span>
+<strong>Stop a process</strong>
+<span>Requests that a process exit or forcefully terminates it when necessary.</span>
+<em>Open full guide →</em>
+</a>
+<a class="command-card" data-open-command="powershell-start-process" href="?command=powershell-start-process">
+<span class="mapping-mini"><code>PowerShell Start-Process</code><span>→</span><code>nohup command &gt; output.log 2&gt;&amp;1 &amp;</code></span>
+<strong>Start a detached process</strong>
+<span>Launches a program in the background and optionally keeps it running after the terminal closes.</span>
+<em>Open full guide →</em>
+</a>
+<a class="command-card" data-open-command="timeout-t" href="?command=timeout-t">
+<span class="mapping-mini"><code>timeout /t</code><span>→</span><code>sleep 5</code></span>
+<strong>Pause a script</strong>
+<span>Waits for a specified amount of time before continuing.</span>
+<em>Open full guide →</em>
+</a>
+<a class="command-card" data-open-command="start-b" href="?command=start-b">
+<span class="mapping-mini"><code>start /b</code><span>→</span><code>command &amp;</code></span>
+<strong>Run a command in the background</strong>
+<span>Starts a command without blocking the shell from accepting additional input.</span>
+<em>Open full guide →</em>
+</a>
+<a class="command-card" data-open-command="start-wait" href="?command=start-wait">
+<span class="mapping-mini"><code>start /wait</code><span>→</span><code>wait PID</code></span>
+<strong>Wait for background jobs</strong>
+<span>Pauses a shell script until one or more background processes finish.</span>
+<em>Open full guide →</em>
+</a>
+<a class="command-card" data-open-command="wmic-process-get-processid" href="?command=wmic-process-get-processid">
+<span class="mapping-mini"><code>wmic process get processid</code><span>→</span><code>ps -eo pid,comm,args</code></span>
+<strong>List process IDs and commands</strong>
+<span>Displays process IDs together with executable names and complete command lines.</span>
+<em>Open full guide →</em>
+</a>
+<a class="command-card" data-open-command="winget-search" href="?command=winget-search">
+<span class="mapping-mini"><code>winget search</code><span>→</span><code>apt search package</code></span>
+<strong>Search available packages</strong>
+<span>Searches configured software repositories for packages matching a name or description.</span>
+<em>Open full guide →</em>
+</a>
+<a class="command-card" data-open-command="winget-list" href="?command=winget-list">
+<span class="mapping-mini"><code>winget list</code><span>→</span><code>pacman -Q</code></span>
+<strong>List installed packages</strong>
+<span>Displays packages currently installed through the system package manager.</span>
+<em>Open full guide →</em>
+</a>
+<a class="command-card" data-open-command="winget-upgrade-all" href="?command=winget-upgrade-all">
+<span class="mapping-mini"><code>winget upgrade --all</code><span>→</span><code>sudo pacman -Syu</code></span>
+<strong>Upgrade installed packages</strong>
+<span>Downloads and installs available updates from configured package repositories.</span>
+<em>Open full guide →</em>
+</a>
+<a class="command-card" data-open-command="winget-source-update" href="?command=winget-source-update">
+<span class="mapping-mini"><code>winget source update</code><span>→</span><code>sudo apt update</code></span>
+<strong>Refresh repository metadata</strong>
+<span>Downloads the latest package lists and repository metadata without necessarily installing updates.</span>
+<em>Open full guide →</em>
+</a>
+<a class="command-card" data-open-command="choco-outdated" href="?command=choco-outdated">
+<span class="mapping-mini"><code>choco outdated</code><span>→</span><code>checkupdates</code></span>
+<strong>Check for available updates</strong>
+<span>Lists installed packages for which newer repository versions are available.</span>
+<em>Open full guide →</em>
+</a>
+<a class="command-card" data-open-command="add-appxpackage" href="?command=add-appxpackage">
+<span class="mapping-mini"><code>Add-AppxPackage</code><span>→</span><code>flatpak install flathub APP_ID</code></span>
+<strong>Install a sandboxed desktop application</strong>
+<span>Installs a desktop application from a Flatpak repository such as Flathub.</span>
+<em>Open full guide →</em>
+</a>
+<a class="command-card" data-open-command="get-appxpackage" href="?command=get-appxpackage">
+<span class="mapping-mini"><code>Get-AppxPackage</code><span>→</span><code>flatpak list --app</code></span>
+<strong>List sandboxed applications</strong>
+<span>Lists installed Flatpak applications and runtimes.</span>
+<em>Open full guide →</em>
+</a>
+<a class="command-card" data-open-command="remove-appxpackage" href="?command=remove-appxpackage">
+<span class="mapping-mini"><code>Remove-AppxPackage</code><span>→</span><code>flatpak uninstall APP_ID</code></span>
+<strong>Remove a sandboxed application</strong>
+<span>Uninstalls a Flatpak application and optionally cleans unused runtimes.</span>
+<em>Open full guide →</em>
+</a>
+<a class="command-card" data-open-command="microsoft-store" href="?command=microsoft-store">
+<span class="mapping-mini"><code>Microsoft Store</code><span>→</span><code>flatpak search QUERY</code></span>
+<strong>Browse desktop applications</strong>
+<span>Provides a central catalog of Linux desktop applications distributed as Flatpaks.</span>
+<em>Open full guide →</em>
+</a>
+<a class="command-card" data-open-command="msiexec-x" href="?command=msiexec-x">
+<span class="mapping-mini"><code>msiexec /x</code><span>→</span><code>sudo pacman -R package</code></span>
+<strong>Uninstall a package</strong>
+<span>Removes software installed through the distribution package manager.</span>
+<em>Open full guide →</em>
+</a>
+<a class="command-card" data-open-command="powershell-get-service" href="?command=powershell-get-service">
+<span class="mapping-mini"><code>PowerShell Get-Service</code><span>→</span><code>systemctl list-units --type=service</code></span>
+<strong>List system services</strong>
+<span>Shows loaded services and their current active, inactive or failed state.</span>
+<em>Open full guide →</em>
+</a>
+<a class="command-card" data-open-command="powershell-start-service" href="?command=powershell-start-service">
+<span class="mapping-mini"><code>PowerShell Start-Service</code><span>→</span><code>sudo systemctl start SERVICE</code></span>
+<strong>Start a service</strong>
+<span>Starts a systemd service immediately for the current boot.</span>
+<em>Open full guide →</em>
+</a>
+<a class="command-card" data-open-command="powershell-stop-service" href="?command=powershell-stop-service">
+<span class="mapping-mini"><code>PowerShell Stop-Service</code><span>→</span><code>sudo systemctl stop SERVICE</code></span>
+<strong>Stop a service</strong>
+<span>Stops a running systemd service for the current boot.</span>
+<em>Open full guide →</em>
+</a>
+<a class="command-card" data-open-command="powershell-restart-service" href="?command=powershell-restart-service">
+<span class="mapping-mini"><code>PowerShell Restart-Service</code><span>→</span><code>sudo systemctl restart SERVICE</code></span>
+<strong>Restart a service</strong>
+<span>Stops and starts a systemd service so configuration or runtime state is reloaded.</span>
+<em>Open full guide →</em>
+</a>
+<a class="command-card" data-open-command="powershell-set-service-startuptype" href="?command=powershell-set-service-startuptype">
+<span class="mapping-mini"><code>PowerShell Set-Service -StartupType</code><span>→</span><code>sudo systemctl enable SERVICE</code></span>
+<strong>Configure startup behavior</strong>
+<span>Controls whether a systemd service starts automatically during boot.</span>
+<em>Open full guide →</em>
+</a>
+<a class="command-card" data-open-command="powershell-get-localuser" href="?command=powershell-get-localuser">
+<span class="mapping-mini"><code>PowerShell Get-LocalUser</code><span>→</span><code>getent passwd</code></span>
+<strong>List local and directory users</strong>
+<span>Lists user accounts known through local files and configured identity services.</span>
+<em>Open full guide →</em>
+</a>
+<a class="command-card" data-open-command="powershell-get-localgroup" href="?command=powershell-get-localgroup">
+<span class="mapping-mini"><code>PowerShell Get-LocalGroup</code><span>→</span><code>getent group</code></span>
+<strong>List groups</strong>
+<span>Lists local and directory-backed groups known to the system.</span>
+<em>Open full guide →</em>
+</a>
+<a class="command-card" data-open-command="powershell-new-localuser" href="?command=powershell-new-localuser">
+<span class="mapping-mini"><code>PowerShell New-LocalUser</code><span>→</span><code>sudo useradd -m USER</code></span>
+<strong>Create a user account</strong>
+<span>Creates a new local Linux user and optionally a home directory and login shell.</span>
+<em>Open full guide →</em>
+</a>
+<a class="command-card" data-open-command="powershell-add-localgroupmember" href="?command=powershell-add-localgroupmember">
+<span class="mapping-mini"><code>PowerShell Add-LocalGroupMember</code><span>→</span><code>sudo usermod -aG GROUP USER</code></span>
+<strong>Add a user to a group</strong>
+<span>Adds an existing user to a supplementary group.</span>
+<em>Open full guide →</em>
+</a>
+<a class="command-card" data-open-command="net-user-username-active-no" href="?command=net-user-username-active-no">
+<span class="mapping-mini"><code>net user username /active:no</code><span>→</span><code>sudo usermod -L USER</code></span>
+<strong>Lock a user account</strong>
+<span>Locks password-based login for a local account without deleting the account or its files.</span>
+<em>Open full guide →</em>
+</a>
+<a class="command-card" data-open-command="net-user-username-active-yes" href="?command=net-user-username-active-yes">
+<span class="mapping-mini"><code>net user username /active:yes</code><span>→</span><code>sudo usermod -U USER</code></span>
+<strong>Unlock a user account</strong>
+<span>Re-enables password authentication for a previously locked account.</span>
+<em>Open full guide →</em>
+</a>
+<a class="command-card" data-open-command="runas-user" href="?command=runas-user">
+<span class="mapping-mini"><code>runas /user</code><span>→</span><code>sudo -u USER command</code></span>
+<strong>Run a command as another user</strong>
+<span>Executes one command or opens a login shell using another user account.</span>
+<em>Open full guide →</em>
+</a>
+<a class="command-card" data-open-command="powershell-select-string" href="?command=powershell-select-string">
+<span class="mapping-mini"><code>PowerShell Select-String</code><span>→</span><code>grep PATTERN FILE</code></span>
+<strong>Search text patterns</strong>
+<span>Finds lines matching a string or regular expression in files or piped input.</span>
+<em>Open full guide →</em>
+</a>
+<a class="command-card" data-open-command="powershell-get-content-wait" href="?command=powershell-get-content-wait">
+<span class="mapping-mini"><code>PowerShell Get-Content -Wait</code><span>→</span><code>tail -f FILE</code></span>
+<strong>Follow a growing file</strong>
+<span>Prints new lines as they are appended to a log or other text file.</span>
+<em>Open full guide →</em>
+</a>
+<a class="command-card" data-open-command="powershell-measure-object" href="?command=powershell-measure-object">
+<span class="mapping-mini"><code>PowerShell Measure-Object</code><span>→</span><code>wc FILE</code></span>
+<strong>Count lines, words and bytes</strong>
+<span>Counts lines, words, bytes or characters in text files and streams.</span>
+<em>Open full guide →</em>
+</a>
+<a class="command-card" data-open-command="powershell-compare-object" href="?command=powershell-compare-object">
+<span class="mapping-mini"><code>PowerShell Compare-Object</code><span>→</span><code>diff -u old.txt new.txt</code></span>
+<strong>Compare text files</strong>
+<span>Shows line-by-line differences or compares two already sorted lists.</span>
+<em>Open full guide →</em>
+</a>
+<a class="command-card" data-open-command="powershell-foreach-object" href="?command=powershell-foreach-object">
+<span class="mapping-mini"><code>PowerShell ForEach-Object</code><span>→</span><code>xargs COMMAND</code></span>
+<strong>Run a command for each input item</strong>
+<span>Consumes a list or stream and runs another command for each item.</span>
+<em>Open full guide →</em>
+</a>
+<a class="command-card" data-open-command="powershell-where-object" href="?command=powershell-where-object">
+<span class="mapping-mini"><code>PowerShell Where-Object</code><span>→</span><code>awk CONDITION</code></span>
+<strong>Filter records</strong>
+<span>Keeps only lines or fields that satisfy a textual or numeric condition.</span>
+<em>Open full guide →</em>
+</a>
+<a class="command-card" data-open-command="powershell-out-file" href="?command=powershell-out-file">
+<span class="mapping-mini"><code>PowerShell Out-File</code><span>→</span><code>command &gt; output.txt</code></span>
+<strong>Write command output to a file</strong>
+<span>Saves standard output to a file, either replacing or appending to it.</span>
+<em>Open full guide →</em>
+</a>
+<a class="command-card" data-open-command="powershell-tee-object" href="?command=powershell-tee-object">
+<span class="mapping-mini"><code>PowerShell Tee-Object</code><span>→</span><code>command | tee output.txt</code></span>
+<strong>Display and save output</strong>
+<span>Copies piped output both to the terminal and to one or more files.</span>
+<em>Open full guide →</em>
+</a>
+<a class="command-card" data-open-command="powershell-convertfrom-json" href="?command=powershell-convertfrom-json">
+<span class="mapping-mini"><code>PowerShell ConvertFrom-Json</code><span>→</span><code>jq EXPRESSION file.json</code></span>
+<strong>Read and query JSON</strong>
+<span>Parses JSON and selects fields, array elements or transformed output.</span>
+<em>Open full guide →</em>
+</a>
+<a class="command-card" data-open-command="powershell-convertto-json" href="?command=powershell-convertto-json">
+<span class="mapping-mini"><code>PowerShell ConvertTo-Json</code><span>→</span><code>jq -n OBJECT</code></span>
+<strong>Create or transform JSON</strong>
+<span>Builds JSON values or reshapes existing JSON data from the command line.</span>
+<em>Open full guide →</em>
+</a></div>
+</section><section aria-labelledby="learningTitle" class="learning-section">
+<div class="section-heading learning-heading">
+<div>
+<p class="eyebrow">Getting started</p>
+<h2 id="learningTitle">How to use Windows commands on Linux</h2>
+</div>
+</div>
+<div class="learning-grid">
+<article>
+<h3>Search by the command you already know</h3>
+<p>Enter a Windows command such as <code>ipconfig</code>, <code>tasklist</code> or <code>findstr</code>. Win2Linux shows the closest Linux command and explains important behavioral differences.</p>
+</article>
+<article>
+<h3>Check your Linux distribution</h3>
+<p>Core shell tools are broadly available, but package managers and service commands can vary between Debian, Ubuntu, Fedora, Arch Linux and other distributions.</p>
+</article>
+<article>
+<h3>Review commands before running them</h3>
+<p>Paths, usernames, network interfaces and disk device names are examples. Commands using <code>sudo</code>, deletion, formatting or partitioning deserve extra verification.</p>
+</article>
+</div>
+</section><section aria-labelledby="faqTitle" class="faq-section">
+<div class="section-heading learning-heading">
+<div>
+<p class="eyebrow">Quick answers</p>
+<h2 id="faqTitle">Windows-to-Linux command FAQ</h2>
+</div>
+</div>
+<div class="faq-list">
+<details>
+<summary>Are Linux commands case-sensitive?</summary>
+<p>Yes. Command names, options and file paths are generally case-sensitive. For example, <code>Documents</code> and <code>documents</code> can refer to different directories.</p>
+</details>
+<details>
+<summary>Do I need <code>sudo</code> for every command?</summary>
+<p>No. Use <code>sudo</code> only when a task requires administrator privileges, such as changing system files, managing services or installing system packages.</p>
+</details>
+<details>
+<summary>Will every command work on every Linux distribution?</summary>
+<p>Most standard shell commands work widely. Package-management, networking and service-management tools can differ, so each guide should be read in the context of your distribution.</p>
+</details>
+</div>
+</section>
+</section>
+<article aria-live="polite" class="detail-view" hidden="" id="detailView"></article>
+</main>
+</div>
+<footer class="site-footer">
+<p>Win2Linux — practical command mappings and Linux migration guidance.</p>
+<div class="footer-links">
+<button id="footerHomeButton" type="button">Browse all commands</button>
+<a href="linux-distros.html">Compare Linux distributions</a>
+</div>
+</footer>
+<noscript>
+<div class="noscript-message">The command directory remains visible, but interactive search and full command details require JavaScript.</div>
+</noscript>
+<script>
+(() => {
+  'use strict';
+
+  const BASE_TITLE = 'Windows to Linux Command Reference | Win2Linux';
+  const BASE_DESCRIPTION = 'Find Linux equivalents for common Windows commands, with explanations, practical use cases, options, warnings, examples and copyable commands.';
+  const THEME_STORAGE_KEY = 'win2linux-theme';
+  const DARK_THEME_COLOR = '#0d1117';
+  const LIGHT_THEME_COLOR = '#f6f8fa';
+
+  let commands = [];
+  let filteredCommands = [];
+  let activeCategory = 'All';
+
+  const searchInput = document.getElementById('search');
+  const categoriesEl = document.getElementById('categories');
+  const commandListEl = document.getElementById('commandList');
+  const commandCardsEl = document.getElementById('commandCards');
+  const welcomeView = document.getElementById('welcomeView');
+  const detailView = document.getElementById('detailView');
+  const commandCount = document.getElementById('commandCount');
+  const visibleCount = document.getElementById('visibleCount');
+  const mainContent = document.getElementById('mainContent');
+  const themeToggle = document.getElementById('themeToggle');
+  const themeIcon = document.getElementById('themeIcon');
+  const themeLabel = document.getElementById('themeLabel');
+  const themeColorMeta = document.getElementById('themeColorMeta');
+  const canonicalLink = document.getElementById('canonicalLink');
+
+  const slugify = value => String(value || '')
+    .toLowerCase()
+    .replace(/&/g, ' and ')
+    .replace(/[^a-z0-9]+/g, '-')
+    .replace(/^-+|-+$/g, '') || 'command';
+
+  const escapeHtml = value => String(value ?? '')
+    .replace(/&/g, '&amp;')
+    .replace(/</g, '&lt;')
+    .replace(/>/g, '&gt;')
+    .replace(/"/g, '&quot;')
+    .replace(/'/g, '&#039;');
+
+  const stripHtml = value => {
+    const node = document.createElement('div');
+    node.innerHTML = String(value || '');
+    return node.textContent.trim();
+  };
+
+  function getCurrentTheme() {
+    return document.documentElement.dataset.theme === 'light' ? 'light' : 'dark';
+  }
+
+  function syncThemeControl() {
+    const theme = getCurrentTheme();
+    const nextTheme = theme === 'dark' ? 'light' : 'dark';
+    themeIcon.textContent = theme === 'dark' ? '☀' : '☾';
+    themeLabel.textContent = `${nextTheme[0].toUpperCase()}${nextTheme.slice(1)} mode`;
+    themeToggle.setAttribute('aria-label', `Switch to ${nextTheme} mode`);
+    themeToggle.setAttribute('aria-pressed', String(theme === 'light'));
+    themeColorMeta.setAttribute('content', theme === 'light' ? LIGHT_THEME_COLOR : DARK_THEME_COLOR);
+  }
+
+  function setTheme(theme, persist = true) {
+    const normalizedTheme = theme === 'light' ? 'light' : 'dark';
+    document.documentElement.dataset.theme = normalizedTheme;
+    document.documentElement.style.colorScheme = normalizedTheme;
+    if (persist) {
+      try { localStorage.setItem(THEME_STORAGE_KEY, normalizedTheme); } catch {}
+    }
+    syncThemeControl();
+  }
+
+  function commandHref(slug) {
+    const url = new URL(window.location.href);
+    url.searchParams.set('command', slug);
+    url.hash = '';
+    return `${url.pathname}${url.search}`;
+  }
+
+  function updateCanonical(command = null) {
+    const url = new URL(window.location.href);
+    url.hash = '';
+    if (command) url.searchParams.set('command', command.slug);
+    else url.searchParams.delete('command');
+    canonicalLink.setAttribute('href', url.href);
+  }
+
+  function setMeta(name, content) {
+    const selector = name.startsWith('og:')
+      ? `meta[property="${name}"]`
+      : `meta[name="${name}"]`;
+    const element = document.querySelector(selector);
+    if (element) element.setAttribute('content', content);
+  }
+
+  function updateDocumentMeta(command = null) {
+    if (!command) {
+      document.title = BASE_TITLE;
+      setMeta('description', BASE_DESCRIPTION);
+      setMeta('og:title', BASE_TITLE);
+      setMeta('og:description', BASE_DESCRIPTION);
+      setMeta('twitter:title', BASE_TITLE);
+      setMeta('twitter:description', BASE_DESCRIPTION);
+      updateCanonical();
+      return;
+    }
+
+    const title = `Windows ${command.win} to Linux: ${command.linuxFull} | Win2Linux`;
+    const description = `Learn the Linux equivalent of the Windows ${command.win} command: ${command.linuxFull}. Includes examples, options, use cases and copyable commands.`;
+    document.title = title;
+    setMeta('description', description);
+    setMeta('og:title', title);
+    setMeta('og:description', description);
+    setMeta('twitter:title', title);
+    setMeta('twitter:description', description);
+    updateCanonical(command);
+  }
+
+  async function loadCommands() {
+    try {
+      const response = await fetch('data/commands.json', { cache: 'no-cache' });
+      if (!response.ok) throw new Error(`HTTP ${response.status} — ${response.statusText}`);
+
+      const data = await response.json();
+      if (!Array.isArray(data) || data.length === 0) {
+        throw new Error('commands.json loaded, but it did not contain any command entries.');
+      }
+
+      commands = data.map((command, index) => ({
+        ...command,
+        index,
+        slug: slugify(command.win)
+      }));
+
+      commandCount.textContent = commands.length;
+      searchInput.disabled = false;
+      renderCategories();
+      applyFilters();
+      routeFromLocation();
+    } catch (error) {
+      showLoadError(error);
+    }
+  }
+
+  function showLoadError(error) {
+    commandListEl.innerHTML = `
+      <div class="state-box error-state">
+        <strong>Could not load commands.json</strong>
+        <p>${escapeHtml(error.message)}</p>
+        <pre>Expected location: data/commands.json\nOpen the site through a web server, not file:// directly.</pre>
+      </div>`;
+    commandCardsEl.innerHTML = '';
+    visibleCount.textContent = 'Unable to load commands';
+    commandCount.textContent = 'Error';
+  }
+
+  function renderCategories() {
+    const categoryNames = ['All', ...new Set(commands.map(command => command.category))];
+    categoriesEl.innerHTML = categoryNames.map(category => `
+      <button
+        class="cat-btn${category === activeCategory ? ' active' : ''}"
+        type="button"
+        data-category="${escapeHtml(category)}"
+        aria-pressed="${category === activeCategory}">
+        ${escapeHtml(category)}
+      </button>`).join('');
+  }
+
+  function applyFilters() {
+    const query = searchInput.value.trim().toLowerCase();
+
+    filteredCommands = commands.filter(command => {
+      const categoryMatches = activeCategory === 'All' || command.category === activeCategory;
+      const searchText = [
+        command.win,
+        command.linux,
+        command.linuxFull,
+        command.short,
+        command.description,
+        command.category,
+        stripHtml(command.tip),
+        command.gotcha,
+        stripHtml(command.example),
+        ...(command.options || []).flatMap(option => [option.flag, option.desc])
+      ].join(' ').toLowerCase();
+      return categoryMatches && (!query || searchText.includes(query));
+    });
+
+    renderCommandList();
+    renderCommandCards();
+  }
+
+  function renderCommandList() {
+    if (!filteredCommands.length) {
+      commandListEl.innerHTML = '<div class="no-results">No commands match your search.</div>';
+      return;
+    }
+
+    const activeSlug = getCommandSlugFromUrl();
+    commandListEl.innerHTML = filteredCommands.map(command => `
+      <a
+        class="cmd-item${activeSlug === command.slug ? ' active' : ''}"
+        href="${escapeHtml(commandHref(command.slug))}"
+        data-open-command="${escapeHtml(command.slug)}">
+        <span class="cmd-name">${escapeHtml(command.win)}</span>
+        <span class="cmd-desc-short">${escapeHtml(command.short)}</span>
+      </a>`).join('');
+  }
+
+  function renderCommandCards() {
+    visibleCount.textContent = `${filteredCommands.length} command${filteredCommands.length === 1 ? '' : 's'}`;
+
+    if (!filteredCommands.length) {
+      commandCardsEl.innerHTML = `
+        <div class="empty-results">
+          <h3>No matching commands</h3>
+          <p>Try another search term or select a different category.</p>
+        </div>`;
+      return;
+    }
+
+    commandCardsEl.innerHTML = filteredCommands.map(command => `
+      <a
+        class="command-card"
+        href="${escapeHtml(commandHref(command.slug))}"
+        data-open-command="${escapeHtml(command.slug)}">
+        <span class="mapping-mini">
+          <code>${escapeHtml(command.win)}</code>
+          <span>→</span>
+          <code>${escapeHtml(command.linuxFull)}</code>
+        </span>
+        <strong>${escapeHtml(command.short)}</strong>
+        <span>${escapeHtml(command.description)}</span>
+        <em>Open full guide →</em>
+      </a>`).join('');
+  }
+
+  function getCommandSlugFromUrl() {
+    return new URL(window.location.href).searchParams.get('command') || '';
+  }
+
+  function openCommand(slug) {
+    const url = new URL(window.location.href);
+    url.searchParams.set('command', slug);
+    url.hash = '';
+    history.pushState({ command: slug }, '', url);
+    routeFromLocation();
+  }
+
+  function showHome() {
+    const url = new URL(window.location.href);
+    url.searchParams.delete('command');
+    url.hash = '';
+    history.pushState(null, '', url);
+    renderHomeView();
+  }
+
+  function routeFromLocation() {
+    const slug = getCommandSlugFromUrl();
+    const command = commands.find(item => item.slug === slug);
+
+    if (slug && command) {
+      renderDetail(command);
+    } else {
+      renderHomeView();
+    }
+  }
+
+  function renderHomeView() {
+    welcomeView.hidden = false;
+    detailView.hidden = true;
+    detailView.innerHTML = '';
+    updateDocumentMeta();
+    renderCommandList();
+    mainContent.focus({ preventScroll: true });
+  }
+
+  function extractRunnableCommands(command) {
+    const lines = String(command.example || '').split(/\r?\n/);
+    const results = [];
+
+    lines.forEach(line => {
+      const wrapper = document.createElement('div');
+      wrapper.innerHTML = line;
+      if (!wrapper.querySelector('.cmd')) return;
+
+      wrapper.querySelectorAll('.comment, .out').forEach(node => node.remove());
+      const value = wrapper.textContent.replace(/\s+/g, ' ').trim();
+      if (value && !results.includes(value)) results.push(value);
+    });
+
+    if (!results.length && command.linuxFull) results.push(command.linuxFull);
+    return results;
+  }
+
+  function buildUseCases(command) {
+    const cases = [{ title: command.short, description: command.description }];
+    (command.options || []).slice(0, 3).forEach(option => {
+      cases.push({ title: option.flag, description: option.desc });
+    });
+    return cases;
+  }
+
+  function renderDetail(command) {
+    const runnableCommands = extractRunnableCommands(command);
+    const useCases = buildUseCases(command);
+    const related = commands
+      .filter(item => item.category === command.category && item.slug !== command.slug)
+      .slice(0, 6);
+    const previous = commands[command.index - 1] || null;
+    const next = commands[command.index + 1] || null;
+
+    const useCaseHtml = useCases.map(item => `
+      <article class="use-case-card">
+        <h3>${escapeHtml(item.title)}</h3>
+        <p>${escapeHtml(item.description)}</p>
+      </article>`).join('');
+
+    const copyableHtml = runnableCommands.map(value => `
+      <div class="copy-row">
+        <code>${escapeHtml(value)}</code>
+        <button class="copy-btn" type="button" data-copy-value="${escapeHtml(value)}">Copy</button>
+      </div>`).join('');
+
+    const optionsHtml = (command.options || []).length
+      ? command.options.map(option => `
+          <tr>
+            <td><code>${escapeHtml(option.flag)}</code></td>
+            <td>${escapeHtml(option.desc)}</td>
+          </tr>`).join('')
+      : '<tr><td colspan="2">No additional options are listed for this command.</td></tr>';
+
+    const warningHtml = command.gotcha ? `
+      <section class="content-section warning-section" aria-labelledby="warningTitle">
+        <div class="section-title-row">
+          <p class="eyebrow">Important</p>
+          <h2 id="warningTitle">What to watch out for</h2>
+        </div>
+        <div class="warning-box">${escapeHtml(command.gotcha)}</div>
+      </section>` : '';
+
+    const relatedHtml = related.map(item => `
+      <a class="related-card" href="${escapeHtml(commandHref(item.slug))}" data-open-command="${escapeHtml(item.slug)}">
+        <code>${escapeHtml(item.win)} → ${escapeHtml(item.linuxFull)}</code>
+        <span>${escapeHtml(item.short)}</span>
+      </a>`).join('');
+
+    detailView.innerHTML = `
+      <div class="detail-toolbar">
+        <button class="back-button" type="button" data-show-home>← All commands</button>
+        <div class="detail-actions">
+          <button class="copy-link-button" type="button" data-copy-page-link>Copy guide link</button>
+          <span>${escapeHtml(command.category)}</span>
+        </div>
+      </div>
+
+      <header class="article-header">
+        <div class="badge-row">
+          <span class="badge windows-badge">Windows</span>
+          <span class="badge linux-badge">Linux</span>
+          <span class="badge category-badge">${escapeHtml(command.category)}</span>
+        </div>
+        <h1>Windows <code>${escapeHtml(command.win)}</code> equivalent in Linux</h1>
+        <p class="article-summary">${escapeHtml(command.description)}</p>
+
+        <div class="primary-mapping">
+          <div>
+            <span>Windows</span>
+            <code>${escapeHtml(command.win)}</code>
+          </div>
+          <span class="mapping-arrow">→</span>
+          <div>
+            <span>Linux</span>
+            <code>${escapeHtml(command.linuxFull)}</code>
+          </div>
+          <button class="copy-btn primary-copy" type="button" data-copy-value="${escapeHtml(command.linuxFull)}">Copy Linux command</button>
+        </div>
+      </header>
+
+      <section class="content-section" aria-labelledby="overviewTitle">
+        <div class="section-title-row">
+          <p class="eyebrow">Overview</p>
+          <h2 id="overviewTitle">What this command does</h2>
+        </div>
+        <p class="prose">${escapeHtml(command.description)}</p>
+        ${command.tip ? `<div class="tip-box"><strong>Migration tip:</strong> ${command.tip}</div>` : ''}
+      </section>
+
+      <section class="content-section" aria-labelledby="useCasesTitle">
+        <div class="section-title-row">
+          <p class="eyebrow">Practical tasks</p>
+          <h2 id="useCasesTitle">Common use cases</h2>
+        </div>
+        <div class="use-case-grid">${useCaseHtml}</div>
+      </section>
+
+      <section class="content-section" aria-labelledby="copyableTitle">
+        <div class="section-title-row">
+          <p class="eyebrow">Ready to run</p>
+          <h2 id="copyableTitle">Copyable Linux commands</h2>
+        </div>
+        <p class="section-intro">Review paths, device names, package names and permissions before running any command.</p>
+        <div class="copy-list">${copyableHtml}</div>
+      </section>
+
+      <section class="content-section" aria-labelledby="examplesTitle">
+        <div class="section-title-row">
+          <p class="eyebrow">Walkthrough</p>
+          <h2 id="examplesTitle">Examples with explanations</h2>
+        </div>
+        <div class="code-block-wrap">
+          <button class="copy-btn block-copy" type="button" data-copy-target="#exampleCode">Copy examples</button>
+          <pre class="annotated-code" id="exampleCode"><code>${command.example || escapeHtml(command.linuxFull)}</code></pre>
+        </div>
+      </section>
+
+      <section class="content-section" aria-labelledby="optionsTitle">
+        <div class="section-title-row">
+          <p class="eyebrow">Reference</p>
+          <h2 id="optionsTitle">Common options and variations</h2>
+        </div>
+        <div class="table-wrap">
+          <table class="options-table">
+            <thead>
+              <tr><th scope="col">Command or option</th><th scope="col">Use</th></tr>
+            </thead>
+            <tbody>${optionsHtml}</tbody>
+          </table>
+        </div>
+      </section>
+
+      ${warningHtml}
+
+      <section class="content-section" aria-labelledby="relatedTitle">
+        <div class="section-title-row">
+          <p class="eyebrow">Keep learning</p>
+          <h2 id="relatedTitle">Related ${escapeHtml(command.category)} commands</h2>
+        </div>
+        <div class="related-grid">${relatedHtml}</div>
+      </section>
+
+      <nav class="pager" aria-label="Previous and next command">
+        ${previous ? `<a href="${escapeHtml(commandHref(previous.slug))}" data-open-command="${escapeHtml(previous.slug)}"><span>← Previous</span><strong>${escapeHtml(previous.win)}</strong></a>` : '<span></span>'}
+        ${next ? `<a class="next" href="${escapeHtml(commandHref(next.slug))}" data-open-command="${escapeHtml(next.slug)}"><span>Next →</span><strong>${escapeHtml(next.win)}</strong></a>` : '<span></span>'}
+      </nav>`;
+
+    welcomeView.hidden = true;
+    detailView.hidden = false;
+    updateDocumentMeta(command);
+    renderCommandList();
+    window.scrollTo({ top: 0, behavior: 'auto' });
+    mainContent.focus({ preventScroll: true });
+  }
+
+  function flashCopied(button) {
+    const original = button.textContent;
+    button.textContent = 'Copied!';
+    button.classList.add('copied');
+    window.setTimeout(() => {
+      button.textContent = original;
+      button.classList.remove('copied');
+    }, 1400);
+  }
+
+  async function copyText(value, button) {
+    try {
+      await navigator.clipboard.writeText(value);
+      flashCopied(button);
+    } catch {
+      const area = document.createElement('textarea');
+      area.value = value;
+      area.style.position = 'fixed';
+      area.style.opacity = '0';
+      document.body.appendChild(area);
+      area.select();
+      document.execCommand('copy');
+      area.remove();
+      flashCopied(button);
+    }
+  }
+
+  document.addEventListener('click', event => {
+    const openLink = event.target.closest('[data-open-command]');
+    if (openLink) {
+      if (event.button === 0 && !event.metaKey && !event.ctrlKey && !event.shiftKey && !event.altKey) {
+        event.preventDefault();
+        openCommand(openLink.dataset.openCommand);
+      }
+      return;
+    }
+
+    if (event.target.closest('[data-show-home]')) {
+      showHome();
+      return;
+    }
+
+    const pageLinkButton = event.target.closest('[data-copy-page-link]');
+    if (pageLinkButton) {
+      copyText(window.location.href, pageLinkButton);
+      return;
+    }
+
+    const copyButton = event.target.closest('[data-copy-value], [data-copy-target]');
+    if (copyButton) {
+      if (copyButton.dataset.copyValue) {
+        copyText(copyButton.dataset.copyValue, copyButton);
+      } else {
+        const target = document.querySelector(copyButton.dataset.copyTarget);
+        if (target) copyText(target.innerText.trim(), copyButton);
+      }
+    }
+  });
+
+  categoriesEl.addEventListener('click', event => {
+    const button = event.target.closest('[data-category]');
+    if (!button) return;
+
+    activeCategory = button.dataset.category;
+    categoriesEl.querySelectorAll('[data-category]').forEach(candidate => {
+      const active = candidate === button;
+      candidate.classList.toggle('active', active);
+      candidate.setAttribute('aria-pressed', String(active));
+    });
+    applyFilters();
+  });
+
+  searchInput.addEventListener('input', applyFilters);
+  document.getElementById('homeButton').addEventListener('click', showHome);
+  document.getElementById('footerHomeButton').addEventListener('click', showHome);
+  themeToggle.addEventListener('click', () => setTheme(getCurrentTheme() === 'dark' ? 'light' : 'dark'));
+  window.addEventListener('popstate', routeFromLocation);
+
+  document.addEventListener('keydown', event => {
+    const target = event.target;
+    const typing = target instanceof HTMLInputElement || target instanceof HTMLTextAreaElement || target.isContentEditable;
+
+    if (event.key === '/' && !typing) {
+      event.preventDefault();
+      searchInput.focus();
+    }
+
+    if (event.key === 'Escape') {
+      if (getCommandSlugFromUrl()) showHome();
+      else if (searchInput.value) {
+        searchInput.value = '';
+        applyFilters();
+        searchInput.focus();
+      }
+    }
+  });
+
+  syncThemeControl();
+  updateCanonical();
+  loadCommands();
+})();
+</script>
+</body>
+</html>
