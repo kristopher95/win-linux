@@ -1,4 +1,4 @@
-# Win2Linux
+# Win-Linux.com
 
 A simple reference website for people moving from Windows to Linux.
 
